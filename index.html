@@ -566,11 +566,11 @@
     .cal-prompt .prompt-icon { font-size: 2rem; margin-bottom: 0.8rem; }
 
     /* ============================================================
-       STEP 9 — BOOKING SECTION (Calendly)
+       STEP 9 — BOOKING SECTION (Request Form)
     ============================================================ */
     #booking { background: var(--deep); }
 
-    .calendly-layout {
+    .booking-layout {
       display: grid;
       grid-template-columns: 1fr 1.6fr;
       gap: 5rem;
@@ -607,7 +607,44 @@
       display: flex; align-items: center; justify-content: center;
     }
 
-    .cal-embed-wrap { border: 1px solid var(--border); overflow: hidden; }
+    .cal-embed-wrap { border: 1px solid var(--border); overflow: hidden; padding: 1.8rem; }
+
+    /* request form fields */
+    .request-form { display: flex; flex-direction: column; }
+
+    .form-row { display: flex; flex-direction: column; margin-bottom: 1.2rem; }
+
+    .form-row-split {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    }
+
+    .form-label {
+      font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 0.5rem;
+    }
+    .form-optional { text-transform: none; letter-spacing: 0; }
+
+    .form-input {
+      width: 100%; background: var(--card); border: 1px solid var(--border);
+      color: var(--white); padding: 0.85rem 1rem;
+      font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+      transition: border-color 0.2s;
+    }
+    .form-input::placeholder { color: var(--muted); }
+    .form-input:focus { outline: none; border-color: var(--red); }
+
+    .form-textarea { resize: vertical; min-height: 90px; font-family: 'DM Sans', sans-serif; }
+
+    .request-success {
+      text-align: center; padding: 3rem 2rem; color: var(--muted);
+    }
+    .request-success .prompt-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+    .request-success p { font-size: 0.9rem; line-height: 1.7; margin-bottom: 0.4rem; }
+    .request-success strong { color: var(--white); font-size: 1.1rem; }
+
+    @media (max-width: 520px) {
+      .form-row-split { grid-template-columns: 1fr; gap: 0; }
+    }
 
     /* ============================================================
        STEP 10 — FOOTER
@@ -626,7 +663,7 @@
        STEP 11 — RESPONSIVE (mobile)
     ============================================================ */
     @media (max-width: 900px) {
-      .calendly-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .booking-layout { grid-template-columns: 1fr; gap: 3rem; }
     }
 
     @media (max-width: 760px) {
@@ -669,11 +706,11 @@
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#booking">Book</a></li>
+      <li><a href="#booking">Request</a></li>
     </ul>
     <button class="nav-book"
       onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
-      BOOK NOW
+      REQUEST NOW
     </button>
   </nav>
 
@@ -691,7 +728,7 @@
       <h1>PREMIUM<span class="line2">FINISH</span></h1>
       <p class="hero-sub">Your house. Your work. Your apartment. We bring the detail shop to you.</p>
       <div class="hero-ctas">
-        <a href="#booking" class="btn-red">Book Appointment</a>
+        <a href="#booking" class="btn-red">Request Appointment</a>
         <a href="#services" class="btn-ghost">See Services</a>
       </div>
       <div class="hero-phone">
@@ -906,56 +943,56 @@
 
 
   <!-- ============================================================
-       BOOKING — powered by Calendly
+       BOOKING — sends a request email via Formspree (no Calendly)
 
-       SETUP (only you need to do this, ~5 minutes):
+       SETUP (only you need to do this, ~3 minutes):
 
-       STEP 1 — Sign up at https://calendly.com (free)
+       STEP 1 — Sign up at https://formspree.io (free plan works
+                 fine, gives you 50 submissions/month).
 
-       STEP 2 — Connect your Google/Apple calendar so Calendly
-                 knows when you're busy and blocks those times.
+       STEP 2 — Click "New Form", name it whatever you like
+                 (e.g. "Premium Finish Appointment Requests"),
+                 and set the destination email to the inbox you
+                 want these requests to land in.
 
-       STEP 3 — Create an Event Type: "New Event Type" → One-on-One
-                 Name: "Auto Detail Appointment"
-                 Duration: 5 hours
-                 Location: "We come to you — you'll provide your address"
+       STEP 3 — Formspree will give you an endpoint that looks like:
+                 https://formspree.io/f/abcdwxyz
+                 Copy it.
 
-       STEP 4 — Set your working hours under Availability.
+       STEP 4 — Paste it below where it says YOUR-FORMSPREE-ID,
+                 replacing the whole placeholder URL in the
+                 <form action="..."> tag a few lines down.
 
-       STEP 5 — Under "Invitee Questions" add:
-                 · "Your address / location?" (required)
-                 · "Any notes or vehicle details?"
+       STEP 5 — Submit the form once yourself from the live site
+                 to confirm it in Formspree (first submission
+                 requires a one-time email confirmation click).
 
-       STEP 6 — Copy your event link (looks like:
-                 https://calendly.com/yourname/auto-detail)
-                 and paste it below where it says YOUR-CALENDLY-LINK.
-
-       STEP 7 — Download the Calendly app (App Store / Google Play).
-                 You'll get push notifications for every booking,
-                 cancellation, and reschedule. Manage everything there.
+       That's it — every submission arrives as an email with the
+       customer's name, email, phone, address, selected service,
+       add-ons, and notes.
   ============================================================ -->
   <section id="booking">
     <div class="wrap">
-      <div class="s-label r">Book Now</div>
+      <div class="s-label r">Request Now</div>
       <h2 class="s-title r">SCHEDULE YOUR DETAIL</h2>
 
-      <div class="calendly-layout">
+      <div class="booking-layout">
 
         <!-- LEFT: info + steps -->
         <div class="cal-info r">
-          <p>Pick your service below, then choose a date and time. We come directly to your location — no drop-off needed.</p>
+          <p>Pick your service below, then send us your details. We come directly to your location — no drop-off needed.</p>
           <div class="ph-sub">Call or Text</div>
           <div class="big-phone">315-641-9988</div>
 
           <div class="cal-steps">
             <div class="cal-step"><span class="step-num">1</span><span>Select your service below</span></div>
-            <div class="cal-step"><span class="step-num">2</span><span>Pick a date &amp; time</span></div>
+            <div class="cal-step"><span class="step-num">2</span><span>Choose any add-ons</span></div>
             <div class="cal-step"><span class="step-num">3</span><span>Enter your name, phone &amp; address</span></div>
-            <div class="cal-step"><span class="step-num">4</span><span>Get an instant confirmation email</span></div>
+            <div class="cal-step"><span class="step-num">4</span><span>We'll call or email to confirm a time</span></div>
           </div>
         </div>
 
-        <!-- RIGHT: service selector + Calendly widget -->
+        <!-- RIGHT: service selector + request form -->
         <div class="r r2">
 
           <div class="svc-selector">
@@ -1028,30 +1065,76 @@
             </div>
 
             <!-- STEP 3: Continue button — only appears after service is chosen -->
-            <button class="continue-btn" id="continueBtn" onclick="revealCalendly()">
-              CONTINUE — PICK A DATE &amp; TIME →
+            <button class="continue-btn" id="continueBtn" onclick="revealForm()">
+              CONTINUE — ENTER YOUR INFO →
             </button>
 
           </div><!-- /svc-selector -->
 
-          <!-- Calendly widget — hidden until Continue is clicked -->
+          <!-- Contact form — hidden until Continue is clicked -->
           <div id="calPrompt" class="cal-prompt">
             <div class="prompt-icon">📅</div>
-            Select a service above, then click Continue to see available times
+            Select a service above, then click Continue to enter your details
           </div>
 
           <div class="cal-embed-wrap" id="calWrap" style="display:none;">
-            <div id="calendlyContainer" style="min-width:300px; height:700px;"></div>
-          </div>
 
-          <!-- Calendly script -->
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async
-            onload="window.calendlyReady = true; if(window.pendingCalendlyUrl) renderCalendly(window.pendingCalendlyUrl);">
-          </script>
+            <!-- ────────────────────────────────────────────────────
+                 Replace the action URL below with your own
+                 Formspree endpoint (see setup steps above).
+            ──────────────────────────────────────────────────── -->
+            <form id="requestForm" class="request-form"
+                  action="https://formspree.io/f/xljrlbja"
+                  method="POST" onsubmit="submitRequest(event)">
+
+              <input type="hidden" name="_subject" value="New Appointment Request — Premium Finish Auto Detailing">
+              <input type="hidden" name="Service" id="formService">
+              <input type="hidden" name="Add-ons" id="formAddons">
+
+              <div class="form-row">
+                <label class="form-label" for="reqName">Full Name</label>
+                <input class="form-input" type="text" id="reqName" name="Name" required placeholder="Jane Smith">
+              </div>
+
+              <div class="form-row-split">
+                <div class="form-row">
+                  <label class="form-label" for="reqEmail">Email</label>
+                  <input class="form-input" type="email" id="reqEmail" name="Email" required placeholder="jane@email.com">
+                </div>
+                <div class="form-row">
+                  <label class="form-label" for="reqPhone">Phone</label>
+                  <input class="form-input" type="tel" id="reqPhone" name="Phone" required placeholder="315-555-0123">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label class="form-label" for="reqAddress">Address / Location</label>
+                <input class="form-input" type="text" id="reqAddress" name="Address" required placeholder="Where should we come to you?">
+              </div>
+
+              <div class="form-row">
+                <label class="form-label" for="reqNotes">Notes / Vehicle Details <span class="form-optional">(optional)</span></label>
+                <textarea class="form-input form-textarea" id="reqNotes" name="Notes" placeholder="Preferred day/time, vehicle make & model, anything else we should know"></textarea>
+              </div>
+
+              <button type="submit" class="continue-btn visible" id="requestSubmitBtn">
+                REQUEST THE APPOINTMENT
+              </button>
+
+            </form>
+
+            <!-- Shown after a successful submission -->
+            <div id="requestSuccess" class="request-success" style="display:none;">
+              <div class="prompt-icon">✅</div>
+              <p><strong>Request sent!</strong></p>
+              <p>We got your details and will reach out shortly to confirm your appointment time.</p>
+            </div>
+
+          </div>
 
         </div><!-- /right column -->
 
-      </div><!-- /calendly-layout -->
+      </div><!-- /booking-layout -->
     </div>
   </section>
 
@@ -1097,11 +1180,7 @@
        3. SERVICE DROPDOWN
     ---------------------------------------------------------- */
 
-    // ── Replace with your real Calendly event URL ────────────
-    const CALENDLY_BASE = 'https://calendly.com/premiumfinishcny/auto-detailing-appointment-1';
-    // ─────────────────────────────────────────────────────────
-
-    let selectedService = '';   // full name passed to Calendly
+    let selectedService = '';   // full name included in the emailed request
     let selectedAddons  = [];
 
     /* Open / close the dropdown */
@@ -1121,7 +1200,7 @@
       - Updates the trigger button text
       - Shows the selected chip
       - Shows the Continue button
-      - Does NOT scroll or open Calendly yet — user picks add-ons first
+      - Does NOT reveal the form yet — user picks add-ons first
     */
     function pickService(optionEl, fullName, displayName) {
       // mark option active, clear others
@@ -1153,7 +1232,7 @@
 
     /* ----------------------------------------------------------
        4. ADDON TOGGLES
-       Toggling add-ons does NOT re-render Calendly — that happens
+       Toggling add-ons does NOT reveal the form — that happens
        only when the customer clicks Continue.
     ---------------------------------------------------------- */
     function toggleAddon(btn, addonName) {
@@ -1169,9 +1248,9 @@
     /* ----------------------------------------------------------
        5. CONTINUE BUTTON
        Only called when the customer deliberately clicks Continue.
-       This is where Calendly renders — no premature scrolling.
+       Reveals the request form (instead of a Calendly widget).
     ---------------------------------------------------------- */
-    function revealCalendly() {
+    function revealForm() {
       if (!selectedService) return;
 
       const prompt = document.getElementById('calPrompt');
@@ -1180,44 +1259,47 @@
       prompt.style.display = 'none';
       wrap.style.display   = 'block';
 
-      const url = buildCalendlyUrl();
-
-      if (window.calendlyReady) {
-        renderCalendly(url);
-      } else {
-        window.pendingCalendlyUrl = url;
-      }
-
-      // scroll to calendar after it's rendered
+      // scroll to the form once it's visible
       setTimeout(() => wrap.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
     }
 
     /* ----------------------------------------------------------
-       6. CALENDLY HELPERS
+       6. FORM SUBMISSION
+       Sends the request to Formspree via fetch so the page never
+       reloads. Falls back to a plain alert if the request fails.
     ---------------------------------------------------------- */
-    function buildCalendlyUrl() {
-      const note = selectedAddons.length
-        ? `${selectedService} | Add-ons: ${selectedAddons.join(', ')}`
-        : selectedService;
-      return (
-        CALENDLY_BASE +
-        '?hide_gdpr_banner=1' +
-        '&background_color=161616' +
-        '&text_color=f2f2f2' +
-        '&primary_color=d93025' +
-        '&a1=' + encodeURIComponent(note)
-      );
-    }
+    async function submitRequest(event) {
+      event.preventDefault();
 
-    function renderCalendly(url) {
-      const container = document.getElementById('calendlyContainer');
-      container.innerHTML = '';   // wipe old iframe
-      window.Calendly.initInlineWidget({
-        url: url,
-        parentElement: container,
-        prefill: {},
-        utm: {}
-      });
+      const form = event.target;
+      const submitBtn = document.getElementById('requestSubmitBtn');
+
+      // fold the selected service + add-ons into the submission
+      document.getElementById('formService').value =
+        selectedService || 'Not selected';
+      document.getElementById('formAddons').value =
+        selectedAddons.length ? selectedAddons.join(', ') : 'None';
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'SENDING...';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (!response.ok) throw new Error('Request failed');
+
+        form.style.display = 'none';
+        document.getElementById('requestSuccess').style.display = 'block';
+
+      } catch (err) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'REQUEST THE APPOINTMENT';
+        alert('Something went wrong sending your request. Please call or text us directly at 315-641-9988.');
+      }
     }
   </script>
 
