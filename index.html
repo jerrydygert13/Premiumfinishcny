@@ -8,6 +8,19 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
 
+  <!-- CRM DATABASE CONNECTION — feeds the request below into the CRM automatically.
+       Leave this file as-is until you finish the one-time setup in admin.html (it has a wizard). -->
+  <script src="supabase-config.js"></script>
+  <script>
+    /* Fallback connection so the CRM works even if supabase-config.js is missing or in another folder.
+       (The publishable key is designed to be public.) */
+    window.PF_SUPABASE = window.PF_SUPABASE || {
+      url: "https://bhbxybbqcornwjtxwbhz.supabase.co",
+      key: "sb_publishable_dYIHFqm5TT15n6KJ49M3Lg_DRqu4G7p"
+    };
+  </script>
+
+
   <style>
     /* ============================================================
        STEP 1 — CSS VARIABLES
@@ -943,34 +956,24 @@
 
 
   <!-- ============================================================
-       BOOKING — sends a request email via Formspree (no Calendly)
+        BOOKING — request form
 
-       SETUP (only you need to do this, ~3 minutes):
+        HOW THIS WORKS NOW (automatic):
+          1. Every submission is saved into your free Supabase
+             database (via supabase-config.js) → it appears in
+             your CRM (admin.html) automatically within ~20
+             seconds, no copying needed.
+          2. The same details are ALSO emailed to you through
+             Formspree (endpoint below) as a backup notification.
+             Keep it — it's your phone-side heads-up.
 
-       STEP 1 — Sign up at https://formspree.io (free plan works
-                 fine, gives you 50 submissions/month).
-
-       STEP 2 — Click "New Form", name it whatever you like
-                 (e.g. "Premium Finish Appointment Requests"),
-                 and set the destination email to the inbox you
-                 want these requests to land in.
-
-       STEP 3 — Formspree will give you an endpoint that looks like:
-                 https://formspree.io/f/abcdwxyz
-                 Copy it.
-
-       STEP 4 — Paste it below where it says YOUR-FORMSPREE-ID,
-                 replacing the whole placeholder URL in the
-                 <form action="..."> tag a few lines down.
-
-       STEP 5 — Submit the form once yourself from the live site
-                 to confirm it in Formspree (first submission
-                 requires a one-time email confirmation click).
-
-       That's it — every submission arrives as an email with the
-       customer's name, email, phone, address, selected service,
-       add-ons, and notes.
-  ============================================================ -->
+        ONE-TIME SETUP:
+          • Supabase: follow the wizard inside admin.html
+            (creates the tables for you — just copy/paste).
+          • Formspree: already configured (endpoint below).
+          • If Supabase isn't set up yet, the form still works —
+            you just get the email only, like before.
+   ============================================================ -->
   <section id="booking">
     <div class="wrap">
       <div class="s-label r">Request Now</div>
@@ -1128,6 +1131,7 @@
               <div class="prompt-icon">✅</div>
               <p><strong>Request sent!</strong></p>
               <p>We got your details and will reach out shortly to confirm your appointment time.</p>
+              <div id="crmStatus" style="font-size:0.72rem; color:#666; margin-top:1rem; letter-spacing:0.5px;"></div>
             </div>
 
           </div>
@@ -1247,8 +1251,7 @@
 
     /* ----------------------------------------------------------
        5. CONTINUE BUTTON
-       Only called when the customer deliberately clicks Continue.
-       Reveals the request form (instead of a Calendly widget).
+       Reveals the request form (service + add-ons must be picked first).
     ---------------------------------------------------------- */
     function revealForm() {
       if (!selectedService) return;
@@ -1265,8 +1268,11 @@
 
     /* ----------------------------------------------------------
        6. FORM SUBMISSION
-       Sends the request to Formspree via fetch so the page never
-       reloads. Falls back to a plain alert if the request fails.
+       1) Saves the request straight into the CRM database
+          (Supabase) so it appears in admin.html automatically.
+       2) Also emails it to you via Formspree as a backup.
+       If the database isn't configured yet, only the email
+       is sent (still works exactly like before).
     ---------------------------------------------------------- */
     async function submitRequest(event) {
       event.preventDefault();
@@ -1284,6 +1290,56 @@
       submitBtn.textContent = 'SENDING...';
 
       try {
+        /* 1) → CRM database (best effort; email below never depends on it) */
+        const crmStatusEl = document.getElementById('crmStatus');
+        if (crmStatusEl) crmStatusEl.textContent = '';
+        try {
+          const sb = window.PF_SUPABASE;
+          if (sb && sb.url && sb.key) {
+            const lead = {
+              name:    document.getElementById('reqName').value.trim(),
+              phone:   document.getElementById('reqPhone').value.trim(),
+              email:   document.getElementById('reqEmail').value.trim(),
+              address: document.getElementById('reqAddress').value.trim(),
+              service: selectedService || '',
+              addons:  selectedAddons.slice(),
+              notes:   document.getElementById('reqNotes').value.trim(),
+              submittedAt: new Date().toISOString()
+            };
+            // The website_leads table has ONE jsonb column called "payload" (that's what the CRM reads),
+            // so the lead must be wrapped in it — flat columns get rejected by Supabase.
+            const payload = { payload: lead };
+            if (!lead.name || !lead.phone || !lead.service) {
+              throw new Error('missing required fields');
+            }
+            const crmHeaders = {
+              'apikey': sb.key,
+              'Content-Type': 'application/json',
+              'Prefer': 'return=minimal'
+            };
+            // legacy JWT keys (ey…) also go in Authorization; publishable keys must not
+            if (/^eyJ/.test(sb.key)) crmHeaders['Authorization'] = 'Bearer ' + sb.key;
+            const crmRes = await fetch(sb.url + '/rest/v1/website_leads', {
+              method: 'POST',
+              headers: crmHeaders,
+              body: JSON.stringify(payload)
+            });
+            if (!crmRes.ok) {
+              let detail = '';
+              try { detail = await crmRes.text(); } catch (e) {}
+              throw new Error('CRM insert failed (HTTP ' + crmRes.status + ') ' + detail);
+            }
+            if (crmStatusEl) crmStatusEl.textContent = '✓ Also saved to CRM — it appears automatically for the owner.';
+          } else if (crmStatusEl) {
+            crmStatusEl.textContent = 'ℹ Sent by email. (CRM auto-save not available on this page load — reload the page if setup was just completed.)';
+          }
+        } catch (crmErr) {
+          // CRM save failed — the email backup still goes out below
+          console.warn('CRM save skipped:', crmErr);
+          if (crmStatusEl) crmStatusEl.textContent = 'ℹ Sent by email. (CRM auto-save not available on this page load — if setup was just completed, reload the page.)';
+        }
+
+        /* 2) → email backup (Formspree) */
         const response = await fetch(form.action, {
           method: 'POST',
           body: new FormData(form),
