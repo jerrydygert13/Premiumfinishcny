@@ -85,3 +85,23 @@ document.querySelectorAll('.compare').forEach(c => {
     c.classList.add('empty'); c.innerHTML = '📷 Photo coming soon';
   }));
 });
+
+/* ----------------------------------------------------------
+   4. INSTAGRAM POSTS
+   Loads Instagram's official embed script only when the
+   Instagram section is about to scroll into view.
+---------------------------------------------------------- */
+const igGrid = document.getElementById('igGrid');
+if (igGrid) {
+  const loadInstagram = () => {
+    if (window.instgrm) { window.instgrm.Embeds.process(); return; }
+    const sc = document.createElement('script');
+    sc.async = true;
+    sc.src = 'https://www.instagram.com/embed.js';
+    document.body.appendChild(sc);
+  };
+  const igObs = new IntersectionObserver(entries => {
+    if (entries.some(e => e.isIntersecting)) { igObs.disconnect(); loadInstagram(); }
+  }, { rootMargin: '600px 0px' });
+  igObs.observe(igGrid);
+}
