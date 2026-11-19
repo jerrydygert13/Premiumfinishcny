@@ -2,7 +2,7 @@
    booking.js — appointment request form
    Service picker, add-ons, and submission to the CRM (Supabase)
    plus the Formspree email backup.
-   Functions here are called from onclick="..." in index.html.
+   Loaded on book.html only. Functions here are called from onclick="..." there.
    ============================================================== */
 
 /* ----------------------------------------------------------
@@ -157,3 +157,17 @@ async function submitRequest(event) {
     alert('Something went wrong sending your request. Please call or text us directly at 315-641-9988.');
   }
 }
+
+/* ----------------------------------------------------------
+   5. PRESELECT FROM LINK
+   services.html links here as book.html?pkg=exec&veh=suv —
+   pick that service automatically.
+---------------------------------------------------------- */
+(function preselectFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const pkg = params.get('pkg');
+  if (!pkg) return;
+  const veh = params.get('veh') === 'suv' ? 'suv' : 'sedan';
+  const opt = document.querySelector(`.svc-option[data-key="${CSS.escape(pkg)}-${veh}"]`);
+  if (opt) opt.click();
+})();

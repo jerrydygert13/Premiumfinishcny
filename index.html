@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Premium Finish Auto Detailing · Mobile Detailing in Central New York</title>
-  <meta name="description" content="Premium Finish brings professional auto detailing to your home, work, or apartment. Hand wash, interior detailing, full packages and add-ons. Call or text 315-641-9988." />
+  <title>Premium Finish Auto Detailing · Mobile Car Detailing in Syracuse, NY</title>
+  <meta name="description" content="Mobile car detailing that comes to your driveway in Syracuse and the 315 area. Packages from $129, monthly plans from $89, ceramic coating and more. Call or text 315-641-9988." />
   <meta name="theme-color" content="#070707" />
-  <meta property="og:title" content="Premium Finish Auto Detailing" />
-  <meta property="og:description" content="Mobile auto detailing — we bring the detail shop to you. Call or text 315-641-9988." />
+  <meta property="og:title" content="Premium Finish Auto Detailing · Mobile Car Detailing in Syracuse, NY" />
+  <meta property="og:description" content="Mobile car detailing that comes to your driveway in Syracuse and the 315 area. Packages from $129, monthly plans from $89, ceramic coating and more. Call or text 315-641-9988." />
   <meta property="og:image" content="images/AFTER-2.jpg" />
   <link rel="icon" href="images/logo.png" />
 
@@ -16,19 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- CRM DATABASE CONNECTION — feeds the request below into the CRM automatically.
-       Leave this file as-is until you finish the one-time setup in admin.html (it has a wizard). -->
-  <script src="supabase-config.js"></script>
-  <script>
-    /* Fallback connection so the CRM works even if supabase-config.js is missing or in another folder.
-       (The publishable key is designed to be public.) */
-    window.PF_SUPABASE = window.PF_SUPABASE || {
-      url: "https://bhbxybbqcornwjtxwbhz.supabase.co",
-      key: "sb_publishable_dYIHFqm5TT15n6KJ49M3Lg_DRqu4G7p"
-    };
-  </script>
-
-  <link rel="stylesheet" href="css/styles.css?v=202611190236" />
+  <link rel="stylesheet" href="css/styles.css?v=202611190352" />
 </head>
 <body>
 
@@ -49,44 +37,46 @@
     <symbol id="i-insta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></symbol>
     <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21z"/></symbol>
     <symbol id="i-google" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.3c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.5c2-1.9 3.3-4.7 3.3-8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.2-2.7l-3.5-2.7c-1 .7-2.2 1-3.7 1-2.8 0-5.2-1.9-6.1-4.5H2.3v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.9 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.3a11 11 0 0 0 0 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.6l3.1-3.1A11 11 0 0 0 2.3 7.1l3.6 2.8C6.8 7.3 9.2 5.4 12 5.4z"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M3 13l2-5a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 5v4H3z"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></symbol>
+    <symbol id="i-engine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h2V7h4V5h4v2h3l2 3h1v6h-1l-2 3H8l-2-3H4z"/></symbol>
   </svg>
 
   <!-- ============================================================
-       NAV
+       NAV — same on every page. If you change it, change it in all 4 pages.
   ============================================================ -->
   <nav class="top" id="topNav">
     <div class="wrap nav-inner">
-      <a href="#top" class="logo" aria-label="Premium Finish Auto Detailing — home">
+      <a href="index.html" class="logo" aria-label="Premium Finish Auto Detailing — home">
         <img src="images/logo.png" alt="Premium Finish Auto Detailing"
              onerror="this.style.display='none'; document.getElementById('logoText').style.display='block'">
         <span class="logo-text grad-text" id="logoText">PREMIUM FINISH</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#plans">Plans</a></li>
-        <li><a href="#results">Results</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#process">How It Works</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="services.html#plans">Plans</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="gallery.html#reviews">Reviews</a></li>
+        <li><a href="services.html#faq">FAQ</a></li>
       </ul>
       <div class="nav-cta">
         <a class="nav-ig" href="https://www.instagram.com/premiumfinishcny/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-insta"/></svg></a>
         <a class="nav-ig" href="https://www.facebook.com/premiumfinishautodetailing" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
         <a class="nav-phone" href="tel:+13156419988"><svg><use href="#i-phone"/></svg>315-641-9988</a>
-        <a class="btn btn-primary" href="#booking">Book a Detail</a>
+        <a class="btn btn-primary" href="book.html">Book a Detail</a>
         <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#services">Services</a>
-      <a href="#plans">Plans</a>
-      <a href="#results">Results</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#process">How It Works</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn btn-primary" href="#booking">Book a Detail</a>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="services.html#plans">Plans</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="gallery.html#reviews">Reviews</a>
+      <a href="services.html#faq">FAQ</a>
+      <a class="btn btn-primary" href="book.html">Book a Detail</a>
     </div>
   </nav>
 
@@ -100,16 +90,16 @@
 
     <div class="wrap hero-inner">
       <div class="hero-copy">
-        <span class="eyebrow in d1">Mobile Auto Detailing · We Come To You</span>
+        <span class="eyebrow in d1"><span class="live-dot"></span>Serving Syracuse &amp; the 315 area</span>
         <h1 class="h-display in d2">
           <span class="ln">Showroom</span>
           <span class="ln grad-text">Finish.</span>
           <span class="ln">Your Driveway.</span>
         </h1>
-        <p class="hero-sub in d3">Your house. Your work. Your apartment. Premium Finish brings the detail shop to you — hand-washed exteriors and deep-cleaned interiors, without the drop-off.</p>
+        <p class="hero-sub in d3">Professional auto detailing, delivered to your driveway. Your house, your work, your apartment — we bring the detail shop to you.</p>
         <div class="hero-ctas in d4">
-          <a href="#booking" class="btn btn-primary">Request Appointment <svg class="btn-arrow"><use href="#i-arrow"/></svg></a>
-          <a href="tel:+13156419988" class="btn btn-ghost"><svg><use href="#i-phone"/></svg>315-641-9988</a>
+          <a href="book.html" class="btn btn-primary">Book your detail <svg class="btn-arrow"><use href="#i-arrow"/></svg></a>
+          <a href="services.html" class="btn btn-ghost">See packages &amp; pricing</a>
         </div>
         <ul class="hero-points in d5">
           <li><svg><use href="#i-pin"/></svg>Fully mobile</li>
@@ -121,330 +111,13 @@
       <div class="hero-visual in d3">
         <img class="hero-car" src="images/logo4.png" alt="Dark sports car with glowing headlights" />
         <div class="hero-floor"></div>
-        <a class="hero-badge" href="#reviews">
+        <a class="hero-badge" href="gallery.html#reviews">
           <svg class="badge-g"><use href="#i-google"/></svg>
           <div><small>Google rating</small><strong>5.0 ★★★★★ · 10 reviews</strong></div>
         </a>
       </div>
     </div>
-    <div class="scroll-cue" aria-hidden="true"></div>
   </header>
-
-
-  <!-- MARQUEE -->
-  <div class="strip" aria-hidden="true">
-    <div class="strip-track">
-      <div class="strip-item">
-        <span>Express Detail</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Executive Detail</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Premium Finish</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Engine Bay Cleaning</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Trim Restoration</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Headlight Restoration</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Monthly Plans</span><svg class="star"><use href="#i-star"/></svg>
-        <span>We Come To You</span><svg class="star"><use href="#i-star"/></svg>
-      </div>
-      <div class="strip-item">
-        <span>Express Detail</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Executive Detail</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Premium Finish</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Engine Bay Cleaning</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Trim Restoration</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Headlight Restoration</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Monthly Plans</span><svg class="star"><use href="#i-star"/></svg>
-        <span>We Come To You</span><svg class="star"><use href="#i-star"/></svg>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- ============================================================
-       SERVICES
-       Prices live in the data-sedan / data-suv attributes below.
-  ============================================================ -->
-  <section id="services">
-    <div class="wrap">
-      <div class="s-head split">
-        <div>
-          <span class="eyebrow r">Services &amp; Pricing</span>
-          <h2 class="h-display s-title r">Pick your finish</h2>
-          <p class="s-lead r r2">Straightforward packages with starting prices. Choose your vehicle size to see what you'll pay.</p>
-        </div>
-        <div class="veh-toggle r r2" role="group" aria-label="Vehicle size" id="vehToggle">
-          <span class="veh-pill" id="vehPill"></span>
-          <button type="button" aria-pressed="true" data-veh="sedan">Sedan / Coupe</button>
-          <button type="button" aria-pressed="false" data-veh="suv">SUV / Truck</button>
-        </div>
-      </div>
-
-      <div class="services-grid">
-
-        <article class="svc r">
-          <div class="svc-icon"><svg><use href="#i-drop"/></svg></div>
-          <h3 class="h-display svc-name">Express Detail</h3>
-          <p class="svc-desc">A quick, detailed clean.</p>
-          <div class="svc-price">
-            <small class="amt-label" data-sedan="Sedan" data-suv="SUV / Truck">Sedan</small>
-            <div class="amt"><sup>$</sup><span class="amt-num" data-sedan="129" data-suv="159">129</span></div>
-          </div>
-          <ul class="svc-list">
-            <li><svg><use href="#i-check"/></svg>Deep wipe-down of all surfaces</li>
-            <li><svg><use href="#i-check"/></svg>Thorough vacuum of all carpets</li>
-            <li><svg><use href="#i-check"/></svg>Cracks &amp; crevices cleaned</li>
-            <li><svg><use href="#i-check"/></svg>Floor mats cleaned &amp; dressed</li>
-            <li><svg><use href="#i-check"/></svg>All windows cleaned</li>
-            <li><svg><use href="#i-check"/></svg>Door jambs cleaned</li>
-            <li><svg><use href="#i-check"/></svg>Hand wash &amp; foam bath</li>
-            <li><svg><use href="#i-check"/></svg>Rims &amp; tires cleaned + shined</li>
-          </ul>
-          <button class="btn btn-ghost" data-book="express">Book Express Detail <svg class="btn-arrow"><use href="#i-arrow"/></svg></button>
-        </article>
-        <article class="svc featured r r2">
-          <span class="svc-tag">Most Popular</span>
-          <div class="svc-icon"><svg><use href="#i-spark"/></svg></div>
-          <h3 class="h-display svc-name">Executive Detail</h3>
-          <p class="svc-desc">Deeper clean &amp; protection.</p>
-          <div class="svc-price">
-            <small class="amt-label" data-sedan="Sedan" data-suv="SUV / Truck">Sedan</small>
-            <div class="amt"><sup>$</sup><span class="amt-num" data-sedan="229" data-suv="259">229</span></div>
-          </div>
-          <ul class="svc-list">
-            <li><svg><use href="#i-check"/></svg>Everything in Express Detail</li>
-            <li><svg><use href="#i-check"/></svg>Light pet hair removal</li>
-            <li><svg><use href="#i-check"/></svg>Light carpet shampoo</li>
-            <li><svg><use href="#i-check"/></svg>Light stain removal</li>
-            <li><svg><use href="#i-check"/></svg>Leather conditioned</li>
-            <li><svg><use href="#i-check"/></svg>All surfaces deeply scrubbed</li>
-            <li><svg><use href="#i-check"/></svg>Interior steamed &amp; sanitized</li>
-            <li><svg><use href="#i-check"/></svg>Iron removal treatment</li>
-            <li><svg><use href="#i-check"/></svg>Protective wax sealant applied</li>
-          </ul>
-          <button class="btn btn-primary" data-book="exec">Book Executive Detail <svg class="btn-arrow"><use href="#i-arrow"/></svg></button>
-        </article>
-        <article class="svc r r3">
-          <div class="svc-icon"><svg><use href="#i-shield"/></svg></div>
-          <h3 class="h-display svc-name">Premium Finish</h3>
-          <p class="svc-desc">Full restoration &amp; protection.</p>
-          <div class="svc-price">
-            <small class="amt-label" data-sedan="Sedan" data-suv="SUV / Truck">Sedan</small>
-            <div class="amt"><sup>$</sup><span class="amt-num" data-sedan="349" data-suv="379">349</span></div>
-          </div>
-          <ul class="svc-list">
-            <li><svg><use href="#i-check"/></svg>Everything in Executive Detail</li>
-            <li><svg><use href="#i-check"/></svg>Heavy stain removal</li>
-            <li><svg><use href="#i-check"/></svg>Full pet hair removal</li>
-            <li><svg><use href="#i-check"/></svg>Deep carpet shampoo</li>
-            <li><svg><use href="#i-check"/></svg>Full interior steam cleaned</li>
-            <li><svg><use href="#i-check"/></svg>UV protectant on all plastics</li>
-            <li><svg><use href="#i-check"/></svg>Trims &amp; plastics dressed</li>
-            <li><svg><use href="#i-check"/></svg>Clay bar treatment</li>
-            <li><svg><use href="#i-check"/></svg>Complete restoration finish</li>
-          </ul>
-          <button class="btn btn-ghost" data-book="prem">Book Premium Finish <svg class="btn-arrow"><use href="#i-arrow"/></svg></button>
-        </article>
-
-      </div>
-
-      <p class="price-note r">Final pricing is determined by vehicle condition. Package selection is based on the level of care required to deliver professional results — entry-level packages apply only to vehicles in suitable condition.</p>
-
-      <div class="addons r">
-        <div class="addons-label">Add-ons<small>Stack onto any package</small></div>
-        <div class="addon"><span>Engine Bay Cleaning</span><strong>+$50</strong></div>
-        <div class="addon"><span>Trim Restoration</span><strong>+$50</strong></div>
-        <div class="addon"><span>Clay Bar &amp; Paint Decon</span><strong>+$50</strong></div>
-        <div class="addon"><span>Headlight Restoration</span><strong>+$100</strong></div>
-        <div class="addon"><span>Protective Wax Sealant</span><strong>+$20</strong></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       MAINTENANCE PLANS
-  ============================================================ -->
-  <section id="plans">
-    <div class="wrap">
-      <div class="s-head center">
-        <span class="eyebrow r">Maintenance Plans</span>
-        <h2 class="h-display s-title r">Consistent care.<br><span class="grad-text">Exceptional results.</span></h2>
-        <p class="s-lead r r2">Keep your vehicle looking its best all year round. Regular detailing protects your investment, maintains value, and keeps every drive feeling like the first.</p>
-      </div>
-      <div class="plans-grid">
-        <article class="svc r">
-          <span class="plan-kicker">Keep it clean</span>
-          <h3 class="h-display svc-name">Basic</h3>
-          <div class="svc-price">
-            <small>Sedan · SUV / Truck +$15</small>
-            <div class="amt"><sup>$</sup>89<span class="per">/ month</span></div>
-          </div>
-          <ul class="svc-list">
-            <li><svg><use href="#i-check"/></svg>Interior wipe-down</li>
-            <li><svg><use href="#i-check"/></svg>Exterior wash</li>
-            <li><svg><use href="#i-check"/></svg>Wheels &amp; tires cleaned</li>
-            <li><svg><use href="#i-check"/></svg>Windows cleaned</li>
-            <li><svg><use href="#i-check"/></svg>Deep vacuum</li>
-          </ul>
-          <button class="btn btn-ghost" data-book="basic">Enroll in Basic <svg class="btn-arrow"><use href="#i-arrow"/></svg></button>
-        </article>
-        <article class="svc featured r r2">
-          <span class="plan-kicker">Ultimate protection</span>
-          <h3 class="h-display svc-name">Premium</h3>
-          <div class="svc-price">
-            <small>Sedan · SUV / Truck +$15</small>
-            <div class="amt"><sup>$</sup>119<span class="per">/ month</span></div>
-          </div>
-          <ul class="svc-list">
-            <li><svg><use href="#i-check"/></svg>Interior &amp; exterior detail</li>
-            <li><svg><use href="#i-check"/></svg>Leather conditioned</li>
-            <li><svg><use href="#i-check"/></svg>Protective wax sealant</li>
-            <li><svg><use href="#i-check"/></svg>Plastics UV protected</li>
-            <li><svg><use href="#i-check"/></svg>Surfaces steamed &amp; sanitized</li>
-          </ul>
-          <button class="btn btn-primary" data-book="premplan">Enroll in Premium <svg class="btn-arrow"><use href="#i-arrow"/></svg></button>
-        </article>
-      </div>
-      <div class="plan-perks r">
-        <strong>Flexible · Convenient · Always Premium</strong>
-        <span>Monthly plans</span><span>Cancel anytime</span><span>Consistent results</span>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       RESULTS — BEFORE & AFTER (drag the handle to compare)
-
-       TO CHANGE PHOTOS: replace the BEFORE-x.jpg / AFTER-x.jpg
-       filenames below. Copy a whole .compare-card to add more.
-  ============================================================ -->
-  <section id="results">
-    <div class="wrap">
-      <div class="s-head split">
-        <div>
-          <span class="eyebrow r">Real Results</span>
-          <h2 class="h-display s-title r">Before &amp; After</h2>
-          <p class="s-lead r r2">Real customer vehicles, detailed on-site. Drag the slider to see the difference.</p>
-        </div>
-        <a href="#booking" class="btn btn-ghost r r2">Get results like this <svg class="btn-arrow"><use href="#i-arrow"/></svg></a>
-      </div>
-
-      <div class="compare-grid">
-        <div class="compare-card r">
-          <div class="compare">
-            <img src="images/AFTER-1.jpg" alt="Wheel after detailing" loading="lazy">
-            <img class="before-img" src="images/BEFORE-1.jpg" alt="Wheel before detailing" loading="lazy">
-            <span class="tag b">Before</span><span class="tag a">After</span>
-            <input type="range" min="0" max="100" value="50" aria-label="Compare before and after: wheel">
-            <div class="compare-line"></div>
-            <div class="compare-handle"><svg><use href="#i-drag"/></svg></div>
-          </div>
-          <div class="compare-cap"><strong>Wheels &amp; Tires</strong><span>Exterior</span></div>
-        </div>
-
-        <div class="compare-card r r2">
-          <div class="compare">
-            <img src="images/AFTER-2.jpg" alt="Front cabin after detailing" loading="lazy">
-            <img class="before-img" src="images/BEFORE-2.jpg" alt="Front cabin before detailing" loading="lazy">
-            <span class="tag b">Before</span><span class="tag a">After</span>
-            <input type="range" min="0" max="100" value="50" aria-label="Compare before and after: front cabin">
-            <div class="compare-line"></div>
-            <div class="compare-handle"><svg><use href="#i-drag"/></svg></div>
-          </div>
-          <div class="compare-cap"><strong>Front Cabin</strong><span>Interior</span></div>
-        </div>
-
-        <div class="compare-card r r3">
-          <div class="compare">
-            <img src="images/AFTER-3.jpg" alt="Truck interior after detailing" loading="lazy">
-            <img class="before-img" src="images/BEFORE-3.jpg" alt="Truck interior before detailing" loading="lazy">
-            <span class="tag b">Before</span><span class="tag a">After</span>
-            <input type="range" min="0" max="100" value="50" aria-label="Compare before and after: truck interior">
-            <div class="compare-line"></div>
-            <div class="compare-handle"><svg><use href="#i-drag"/></svg></div>
-          </div>
-          <div class="compare-cap"><strong>Truck Interior</strong><span>Interior</span></div>
-        </div>
-
-        <div class="compare-card r r4">
-          <div class="compare">
-            <img src="images/AFTER-4.jpg" alt="Rear seats after detailing" loading="lazy">
-            <img class="before-img" src="images/BEFORE-4.jpg" alt="Rear seats before detailing" loading="lazy">
-            <span class="tag b">Before</span><span class="tag a">After</span>
-            <input type="range" min="0" max="100" value="50" aria-label="Compare before and after: rear seats">
-            <div class="compare-line"></div>
-            <div class="compare-handle"><svg><use href="#i-drag"/></svg></div>
-          </div>
-          <div class="compare-cap"><strong>Rear Seats &amp; Floors</strong><span>Interior</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       REVIEWS — real Google Maps reviews (copied word for word).
-       To add one: copy a <figure class="review"> block.
-  ============================================================ -->
-  <section id="reviews">
-    <div class="wrap">
-      <div class="s-head split">
-        <div>
-          <span class="eyebrow r">Reviews</span>
-          <h2 class="h-display s-title r">What customers say</h2>
-          <div class="rating-sum r r2">
-            <span class="rating-num">5.0</span>
-            <div><div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><span>Based on 10 Google reviews</span></div>
-          </div>
-        </div>
-        <div class="rv-actions r r2">
-          <a class="btn btn-ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJMW43I-AZ2WYRtVZ7ajFmMa0" target="_blank" rel="noopener"><svg><use href="#i-google"/></svg>See all on Google</a>
-          <a class="btn btn-primary" href="https://search.google.com/local/writereview?placeid=ChIJMW43I-AZ2WYRtVZ7ajFmMa0" target="_blank" rel="noopener">Leave a review</a>
-        </div>
-      </div>
-      <div class="reviews-grid">
-        <figure class="review r">
-          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-          <blockquote>“Jerry detailed our BMW today. He was supposed to do it yesterday, but Mother Nature had other plans. He handled the change like a true professional. Instead of just canceling and letting us find someone else he went out of his way to make sure we got taken care of, which in this case meant coming back on a Sunday to do the job. He does top notch work, is super professional and is very nice and easy to work with. I cannot recommend him more if you want to get your car looking like new again. Worth every penny.”</blockquote>
-          <figcaption><span class="rv-avatar">J</span><span><strong>Jonathan S.</strong><small>Google review · BMW</small></span></figcaption>
-        </figure>
-        <figure class="review r r2">
-          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-          <blockquote>“I couldn’t be happier with the job Premium Finish Auto Detailing did on my Chevy Blazer. I got the full interior and exterior finish and they made it look better than I ever expected—it’s absolutely spotless inside and out. They paid attention to every little detail, and you can tell they take a lot of pride in their work. The service was professional, friendly, and worth every penny. If you’re looking for a detail that makes your car look and feel brand new, I highly recommend Premium Finish Auto Detailing. I’ll definitely be coming back!”</blockquote>
-          <figcaption><span class="rv-avatar">P</span><span><strong>Preston</strong><small>Google review · Chevy Blazer</small></span></figcaption>
-        </figure>
-        <figure class="review r r3">
-          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-          <blockquote>“Jerry did a beautiful job on my piano black Mini Cooper. Inside and out, the car sparkled. It was a brutally hot day and he worked on it for three hours. Rugs, dash, fixtures—immaculate. Wash and wax reasonably priced. I highly recommend him.”</blockquote>
-          <figcaption><span class="rv-avatar">D</span><span><strong>Donna M.</strong><small>Google review · Mini Cooper</small></span></figcaption>
-        </figure>
-        <figure class="review r">
-          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-          <blockquote>“Jerry detailed our truck today, we had reached out to him kinda last minute &amp; he made it work! Cleaned it inside and out, it looks like new! Needless to say did a phenomenal job and got into detail! Super friendly and sweet as well! Would highly recommend him (:”</blockquote>
-          <figcaption><span class="rv-avatar">L</span><span><strong>Liz S.</strong><small>Google review · Truck</small></span></figcaption>
-        </figure>
-        <figure class="review r r2">
-          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-          <blockquote>“I couldn’t be happier with the detailing job! They arrived on time, were professional, friendly, and paid incredible attention to every detail. My car looks and feels like it just came off the showroom floor. The interior is spotless, the exterior shines beautifully! They went above and beyond my expectations. Highly recommend!”</blockquote>
-          <figcaption><span class="rv-avatar">E</span><span><strong>Elizabeth</strong><small>Google review</small></span></figcaption>
-        </figure>
-        <figure class="review r r3">
-          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-          <blockquote>“I got the full Premium Finish on my car and absolutely LOVED it! He took amazing care of my car and left it spotless and protected for the future. If anyone needs their car detailed, make sure they book with Premium Finish Auto Detailing to get that Premium Finish on their car!”</blockquote>
-          <figcaption><span class="rv-avatar">R</span><span><strong>Robert B.</strong><small>Google review</small></span></figcaption>
-        </figure>
-        <figure class="review r">
-          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-          <blockquote>“Jerry was great. Job was well done and prices are just right. Excellent work ethic. I will use his services again and again.”</blockquote>
-          <figcaption><span class="rv-avatar">J</span><span><strong>John H.</strong><small>Google review</small></span></figcaption>
-        </figure>
-        <figure class="review r r2">
-          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-          <blockquote>“Went to premium finish to get my Kia forte gt cleaned and he did an amazing job. Really professional work and great customer service. Definitely recommend if you need your vehicle cleaned!!!!”</blockquote>
-          <figcaption><span class="rv-avatar">C</span><span><strong>Caleb C.</strong><small>Google review · Kia Forte GT</small></span></figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
 
 
   <!-- ============================================================
@@ -462,7 +135,7 @@
         </a>
         <div class="ig-actions">
           <a class="ig-follow" href="https://www.instagram.com/premiumfinishcny/" target="_blank" rel="noopener"><svg><use href="#i-insta"/></svg>Follow</a>
-          <a class="ig-gallery" href="https://www.instagram.com/premiumfinishcny/" target="_blank" rel="noopener">Full gallery →</a>
+          <a class="ig-gallery" href="gallery.html">Full gallery →</a>
         </div>
       </div>
       <!-- Photo strip. To change a photo, replace images/instagram/ig-1.jpg … ig-6.jpg
@@ -496,319 +169,176 @@
     </div>
   </section>
 
+  <!-- PACKAGES (brief) — full details live on services.html -->
+  <section id="home-packages">
+    <div class="wrap">
+      <div class="s-head center">
+        <span class="eyebrow r">Packages</span>
+        <h2 class="h-display s-title r">Three details.<br><span class="grad-text">Zero shortcuts.</span></h2>
+        <p class="s-lead r r2">Straightforward pricing by vehicle size. Every package starts with a careful hand wash.</p>
+      </div>
+      <div class="pkg-grid">
+        <a class="pkg r" href="services.html">
+          <span class="pkg-kicker">Quick &amp; thorough</span>
+          <h3 class="h-display">Express Detail</h3>
+          <p>A quick, detailed clean inside and out — wipe-down, vacuum, windows, hand wash and wheels.</p>
+          <div class="pkg-prices"><span><strong>$129</strong>sedan</span><span><strong>$159</strong>SUV / truck</span></div>
+        </a>
+        <a class="pkg featured r r2" href="services.html">
+          <span class="svc-tag">Most Popular</span>
+          <span class="pkg-kicker">Deeper clean &amp; protection</span>
+          <h3 class="h-display">Executive Detail</h3>
+          <p>Everything in Express plus shampoo, stain and pet hair removal, steam, leather conditioning and wax sealant.</p>
+          <div class="pkg-prices"><span><strong>$229</strong>sedan</span><span><strong>$259</strong>SUV / truck</span></div>
+        </a>
+        <a class="pkg r r3" href="services.html">
+          <span class="pkg-kicker">Full restoration</span>
+          <h3 class="h-display">Premium Finish</h3>
+          <p>The complete reset — heavy stains, deep shampoo, full steam, clay bar and UV protection on every plastic.</p>
+          <div class="pkg-prices"><span><strong>$349</strong>sedan</span><span><strong>$379</strong>SUV / truck</span></div>
+        </a>
+      </div>
+      <div class="pkg-foot r">
+        <span>Also: <a href="services.html#plans">monthly maintenance plans from $89/mo</a></span>
+        <a class="btn btn-ghost" href="services.html">Full package details &amp; add-ons <svg class="btn-arrow"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
 
-  <!-- ============================================================
-       PROCESS
-  ============================================================ -->
+
+  <!-- FEATURE: maintenance plans -->
+  <section id="home-feature">
+    <div class="wrap feature">
+      <div class="feature-media r">
+        <figure><img src="images/inside2.jpg" alt="Clean truck interior with leather seats" loading="lazy"></figure>
+        <figure><img src="images/AFTER-1.jpg" alt="Clean wheel after detailing" loading="lazy"></figure>
+      </div>
+      <div>
+        <span class="eyebrow r">Maintenance plans</span>
+        <h2 class="h-display s-title r">Clean all year.<br><span class="grad-text">One monthly price.</span></h2>
+        <p class="s-lead r r2">Regular detailing protects your investment, keeps its value, and makes every drive feel like the first. Monthly plans, cancel anytime.</p>
+        <ul class="feature-list">
+          <li class="r"><span class="fi"><svg><use href="#i-check"/></svg></span><div><strong>Basic — $89/month</strong><span>Interior wipe-down, exterior wash, wheels, windows and a deep vacuum.</span></div></li>
+          <li class="r r2"><span class="fi"><svg><use href="#i-shield"/></svg></span><div><strong>Premium — $119/month</strong><span>Full interior &amp; exterior detail, leather conditioning, wax sealant and UV protection.</span></div></li>
+        </ul>
+        <div class="hero-ctas r">
+          <a href="services.html#plans" class="btn btn-primary">See the plans <svg class="btn-arrow"><use href="#i-arrow"/></svg></a>
+          <a href="sms:+13156419988" class="btn btn-ghost"><svg><use href="#i-msg"/></svg>Text to enroll</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HOW IT WORKS -->
   <section id="process">
     <div class="wrap">
       <div class="s-head center">
-        <span class="eyebrow r">How It Works</span>
-        <h2 class="h-display s-title r">Detailed without<br>the drive</h2>
-        <p class="s-lead r r2">No waiting rooms, no rides back. Four simple steps from dirty to done.</p>
+        <span class="eyebrow r">How it works</span>
+        <h2 class="h-display s-title r">Simple. Mobile.<br><span class="grad-text">Done right.</span></h2>
       </div>
-      <div class="steps">
-        <div class="step r"><div class="step-n">01</div><h3>Request online</h3><p>Pick your package and add-ons below, then tell us where your car will be.</p></div>
-        <div class="step r r2"><div class="step-n">02</div><h3>We confirm a time</h3><p>We'll call, text or email to lock in a day and time that works for you.</p></div>
-        <div class="step r r3"><div class="step-n">03</div><h3>We come to you</h3><p>Home, work or apartment — we arrive with everything needed to do the job.</p></div>
-        <div class="step r r4"><div class="step-n">04</div><h3>Enjoy the finish</h3><p>Step back into a car that looks and feels like the day you got it.</p></div>
+      <div class="steps steps-3">
+        <div class="step r"><div class="step-n">01</div><h3>Book in under a minute</h3><p>Pick a package online, or just text us a photo of your vehicle for a quote.</p></div>
+        <div class="step r r2"><div class="step-n">02</div><h3>We come to you</h3><p>Home, work or apartment — we arrive with everything needed to do the job.</p></div>
+        <div class="step r r3"><div class="step-n">03</div><h3>Walk out to a new car</h3><p>Step back into a car that looks and feels like the day you got it.</p></div>
       </div>
     </div>
   </section>
 
 
-  <!-- ============================================================
-       INTERIOR FEATURE
-  ============================================================ -->
-  <section id="interiors">
-    <div class="wrap feature">
-      <div class="feature-media r">
-        <figure><img src="images/inside2.jpg" alt="Clean truck interior with leather seats and steering wheel" loading="lazy"></figure>
-        <figure><img src="images/inside.jpg" alt="Spotless center console after interior detail" loading="lazy"></figure>
-      </div>
-      <div>
-        <span class="eyebrow r">The Premium Finish Standard</span>
-        <h2 class="h-display s-title r">Interiors that feel new again</h2>
-        <p class="s-lead r r2">Your car is where you spend hours every week. We treat it that way — slow, careful work on every surface you touch.</p>
-        <ul class="feature-list">
-          <li class="r"><span class="fi"><svg><use href="#i-vac"/></svg></span><div><strong>Deep extraction of dirt &amp; debris</strong><span>Carpets, seats, cracks and crevices — vacuumed out completely.</span></div></li>
-          <li class="r r2"><span class="fi"><svg><use href="#i-spark"/></svg></span><div><strong>Every surface wiped down</strong><span>Dash, console, door panels and jambs cleaned top to bottom.</span></div></li>
-          <li class="r r3"><span class="fi"><svg><use href="#i-shield"/></svg></span><div><strong>Streak-free glass, inside &amp; out</strong><span>Clear windows for a cabin that looks as good as it feels.</span></div></li>
-        </ul>
-        <a href="#booking" class="btn btn-primary r">Book a Detail <svg class="btn-arrow"><use href="#i-arrow"/></svg></a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       FAQ
-  ============================================================ -->
-  <section id="faq">
-    <div class="wrap faq-wrap">
-      <div>
-        <span class="eyebrow r">FAQ</span>
-        <h2 class="h-display s-title r">Good questions</h2>
-        <p class="s-lead r r2">Don't see yours? Call or text <a href="tel:+13156419988" style="color:var(--orange);text-decoration:none;font-weight:700;">315-641-9988</a> — we're happy to help.</p>
-      </div>
-      <div class="faq-list r r2">
-        <details open>
-          <summary>Where do you do the detailing?<span class="pm"></span></summary>
-          <div class="ans">Wherever your car is. We're fully mobile — we come to your house, your work, or your apartment, so there's no drop-off and no waiting around.</div>
-        </details>
-        <details>
-          <summary>Is the listed price final?<span class="pm"></span></summary>
-          <div class="ans">Final pricing is determined by vehicle condition. Package selection is based on the level of care required to deliver professional results — entry-level packages apply only to vehicles in suitable condition. SUVs and trucks are +$30 on packages and +$15/month on maintenance plans.</div>
-        </details>
-        <details>
-          <summary>Which package is right for me?<span class="pm"></span></summary>
-          <div class="ans">Express Detail is a quick, detailed clean inside and out. Executive Detail adds a deeper clean and protection — light shampoo, stain and pet hair removal, steam, leather conditioning and wax sealant. Premium Finish is our full restoration: heavy stains, full pet hair removal, deep shampoo, clay bar and UV protection.</div>
-        </details>
-        <details>
-          <summary>How do maintenance plans work?<span class="pm"></span></summary>
-          <div class="ans">Pick Basic ($89/month) or Premium ($119/month) and we'll keep your vehicle looking its best on a regular schedule. Plans are monthly and you can cancel anytime.</div>
-        </details>
-        <details>
-          <summary>How do I book?<span class="pm"></span></summary>
-          <div class="ans">Use the request form below — pick your service and any add-ons, then send us your details. We'll reach out to confirm a time. You can also call or text us any time at 315-641-9988.</div>
-        </details>
-        <details>
-          <summary>Can I add extra services?<span class="pm"></span></summary>
-          <div class="ans">Yes. Engine Bay Cleaning, Trim Restoration, Clay Bar &amp; Paint Decon, Headlight Restoration and Protective Wax Sealant can be added to any package when you book.</div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-        BOOKING — request form
-
-        HOW THIS WORKS (automatic):
-          1. Every submission is saved into your free Supabase
-             database (via supabase-config.js) → it appears in
-             your CRM (admin.html) automatically.
-          2. The same details are ALSO emailed to you through
-             Formspree (endpoint below) as a backup notification.
-   ============================================================ -->
-  <section id="booking">
+  <!-- REVIEWS (short) — full list lives on gallery.html -->
+  <section id="home-reviews">
     <div class="wrap">
-      <div class="s-head">
-        <span class="eyebrow r">Request Now</span>
-        <h2 class="h-display s-title r">Schedule your detail</h2>
-      </div>
-
-      <div class="booking-layout">
-
-        <!-- LEFT: info + steps -->
-        <div class="cal-info r">
-          <p>Pick your service, then send us your details. We come directly to your location — no drop-off needed.</p>
-
-          <div class="contact-card">
-            <div class="ph-sub">Prefer to talk? Call or text</div>
-            <a class="big-phone" href="tel:+13156419988">315-641-9988</a>
-            <div class="contact-actions">
-              <a class="btn btn-ghost" href="tel:+13156419988"><svg><use href="#i-phone"/></svg>Call</a>
-              <a class="btn btn-ghost" href="sms:+13156419988"><svg><use href="#i-msg"/></svg>Text</a>
-              <a class="btn btn-ghost" href="mailto:Premiumfinishcny@gmail.com">Email</a>
-              <a class="btn btn-ghost" href="https://www.instagram.com/premiumfinishcny/" target="_blank" rel="noopener"><svg><use href="#i-insta"/></svg>DM</a>
-              <a class="btn btn-ghost" href="https://www.facebook.com/premiumfinishautodetailing" target="_blank" rel="noopener"><svg><use href="#i-fb"/></svg>Facebook</a>
-            </div>
-          </div>
-
-          <div class="cal-steps">
-            <div class="cal-step"><span class="step-num">1</span><span>Select your service</span></div>
-            <div class="cal-step"><span class="step-num">2</span><span>Choose any add-ons</span></div>
-            <div class="cal-step"><span class="step-num">3</span><span>Enter your name, phone &amp; address</span></div>
-            <div class="cal-step"><span class="step-num">4</span><span>We'll call or email to confirm a time</span></div>
-          </div>
+      <div class="s-head split">
+        <div>
+          <span class="eyebrow r">Reviews</span>
+          <h2 class="h-display s-title r">Five stars.<br><span class="grad-text">Every single one.</span></h2>
         </div>
+        <a class="rating-link r r2" href="https://www.google.com/maps/place/?q=place_id:ChIJMW43I-AZ2WYRtVZ7ajFmMa0" target="_blank" rel="noopener">
+          <svg class="badge-g"><use href="#i-google"/></svg>
+          <span><strong>5.0 ★★★★★</strong><small>10 Google reviews →</small></span>
+        </a>
+      </div>
+      <div class="home-reviews-grid">
+        <figure class="review r">
+          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>“Jerry detailed our truck today, we had reached out to him kinda last minute &amp; he made it work! Cleaned it inside and out, it looks like new! Needless to say did a phenomenal job and got into detail! Super friendly and sweet as well! Would highly recommend him (:”</blockquote>
+          <figcaption><span class="rv-avatar">L</span><span><strong>Liz S.</strong><small>Google review · Truck</small></span></figcaption>
+        </figure>
+        <figure class="review r r3">
+          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>“I got the full Premium Finish on my car and absolutely LOVED it! He took amazing care of my car and left it spotless and protected for the future. If anyone needs their car detailed, make sure they book with Premium Finish Auto Detailing to get that Premium Finish on their car!”</blockquote>
+          <figcaption><span class="rv-avatar">R</span><span><strong>Robert B.</strong><small>Google review</small></span></figcaption>
+        </figure>
+        <figure class="review r">
+          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>“Jerry was great. Job was well done and prices are just right. Excellent work ethic. I will use his services again and again.”</blockquote>
+          <figcaption><span class="rv-avatar">J</span><span><strong>John H.</strong><small>Google review</small></span></figcaption>
+        </figure>
+      </div>
+      <p class="more-link r"><a href="gallery.html#reviews">Read all reviews →</a></p>
+    </div>
+  </section>
 
-        <!-- RIGHT: service selector + request form -->
-        <div class="book-panel r r2">
 
-          <div class="svc-selector">
+  <!-- BEYOND THE WASH -->
+  <section id="beyond">
+    <div class="wrap">
+      <div class="s-head split">
+        <div>
+          <span class="eyebrow r">Beyond the wash</span>
+          <h2 class="h-display s-title r">Protection &amp;<br><span class="grad-text">restoration.</span></h2>
+          <p class="s-lead r r2">Central New York winters, road salt and summer sun are hard on a car. These treatments keep it protected between details.</p>
+        </div>
+        <a class="btn btn-ghost r r2" href="services.html#addons">Explore all services <svg class="btn-arrow"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="beyond-grid">
+        <div class="beyond r"><span class="svc-icon"><svg><use href="#i-shield"/></svg></span><h3>Ceramic Coating &amp; Paint Correction</h3><p>Machine polishing that removes swirls, sealed with a long-lasting ceramic coating. Priced after a quick look at your paint.</p><a href="sms:+13156419988">Text for an estimate →</a></div>
+        <div class="beyond r r2"><span class="svc-icon"><svg><use href="#i-bulb"/></svg></span><h3>Headlight Restoration</h3><p>Cloudy, yellowed headlights cleared up for a sharper look and better night visibility.</p><strong>+$100</strong></div>
+        <div class="beyond r r3"><span class="svc-icon"><svg><use href="#i-spark"/></svg></span><h3>Clay Bar &amp; Paint Decon</h3><p>Pulls embedded grime out of the clear coat and leaves the paint glass-smooth.</p><strong>+$50</strong></div>
+        <div class="beyond r r4"><span class="svc-icon"><svg><use href="#i-engine"/></svg></span><h3>Engine Bay &amp; Trim</h3><p>Engine bay cleaning and faded trim restored to a deep, even black.</p><strong>+$50 each</strong></div>
+      </div>
+    </div>
+  </section>
 
-            <!-- STEP 1: Service dropdown -->
-            <span class="svc-selector-label">Step 1 — Select your service</span>
 
-            <div class="svc-dropdown" id="svcDropdown">
-              <button type="button" class="svc-dropdown-trigger" id="svcTrigger" onclick="toggleDropdown()">
-                <span id="triggerText">Choose a service...</span>
-                <span class="trigger-arrow">▾</span>
-              </button>
-              <div class="svc-dropdown-menu" id="svcMenu">
-                <div class="svc-option-group">Express Detail</div>
-                <button type="button" class="svc-option" data-key="express-sedan" onclick="pickService(this, 'Express Detail — Sedan ($129)', 'Express Detail — Sedan')">
-                  Sedan <span class="opt-price">$129</span>
-                </button>
-                <button type="button" class="svc-option" data-key="express-suv" onclick="pickService(this, 'Express Detail — SUV/Truck ($159)', 'Express Detail — SUV/Truck')">
-                  SUV / Truck <span class="opt-price">$159</span>
-                </button>
-
-                <div class="svc-option-group">Executive Detail</div>
-                <button type="button" class="svc-option" data-key="exec-sedan" onclick="pickService(this, 'Executive Detail — Sedan ($229)', 'Executive Detail — Sedan')">
-                  Sedan <span class="opt-price">$229</span>
-                </button>
-                <button type="button" class="svc-option" data-key="exec-suv" onclick="pickService(this, 'Executive Detail — SUV/Truck ($259)', 'Executive Detail — SUV/Truck')">
-                  SUV / Truck <span class="opt-price">$259</span>
-                </button>
-
-                <div class="svc-option-group">Premium Finish</div>
-                <button type="button" class="svc-option" data-key="prem-sedan" onclick="pickService(this, 'Premium Finish — Sedan ($349)', 'Premium Finish — Sedan')">
-                  Sedan <span class="opt-price">$349</span>
-                </button>
-                <button type="button" class="svc-option" data-key="prem-suv" onclick="pickService(this, 'Premium Finish — SUV/Truck ($379)', 'Premium Finish — SUV/Truck')">
-                  SUV / Truck <span class="opt-price">$379</span>
-                </button>
-
-                <div class="svc-option-group">Basic Maintenance Plan</div>
-                <button type="button" class="svc-option" data-key="basic-sedan" onclick="pickService(this, 'Basic Maintenance Plan — Sedan ($89/mo)', 'Basic Maintenance Plan — Sedan')">
-                  Sedan <span class="opt-price">$89/mo</span>
-                </button>
-                <button type="button" class="svc-option" data-key="basic-suv" onclick="pickService(this, 'Basic Maintenance Plan — SUV/Truck ($104/mo)', 'Basic Maintenance Plan — SUV/Truck')">
-                  SUV / Truck <span class="opt-price">$104/mo</span>
-                </button>
-
-                <div class="svc-option-group">Premium Maintenance Plan</div>
-                <button type="button" class="svc-option" data-key="premplan-sedan" onclick="pickService(this, 'Premium Maintenance Plan — Sedan ($119/mo)', 'Premium Maintenance Plan — Sedan')">
-                  Sedan <span class="opt-price">$119/mo</span>
-                </button>
-                <button type="button" class="svc-option" data-key="premplan-suv" onclick="pickService(this, 'Premium Maintenance Plan — SUV/Truck ($134/mo)', 'Premium Maintenance Plan — SUV/Truck')">
-                  SUV / Truck <span class="opt-price">$134/mo</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- Selected service chip (shown after picking) -->
-            <div class="svc-selected-chip" id="selectedChip">
-              <span class="chip-dot"></span>
-              <span id="chipText"></span>
-              <button type="button" class="chip-change" onclick="changeService()">Change</button>
-            </div>
-
-            <!-- STEP 2: Add-ons -->
-            <span class="addon-section-label">Step 2 — Add-ons (optional)</span>
-            <div class="addons-grid">
-              <button type="button" class="addon-toggle" onclick="toggleAddon(this, 'Engine Bay Cleaning (+$50)')">
-                <span class="at-check">✓</span>
-                <span class="at-name">Engine Bay Cleaning</span>
-                <span class="at-price">+$50</span>
-              </button>
-              <button type="button" class="addon-toggle" onclick="toggleAddon(this, 'Trim Restoration (+$50)')">
-                <span class="at-check">✓</span>
-                <span class="at-name">Trim Restoration</span>
-                <span class="at-price">+$50</span>
-              </button>
-              <button type="button" class="addon-toggle" onclick="toggleAddon(this, 'Clay Bar &amp; Paint Decon (+$50)')">
-                <span class="at-check">✓</span>
-                <span class="at-name">Clay Bar &amp; Paint Decon</span>
-                <span class="at-price">+$50</span>
-              </button>
-              <button type="button" class="addon-toggle" onclick="toggleAddon(this, 'Headlight Restoration (+$100)')">
-                <span class="at-check">✓</span>
-                <span class="at-name">Headlight Restoration</span>
-                <span class="at-price">+$100</span>
-              </button>
-              <button type="button" class="addon-toggle" onclick="toggleAddon(this, 'Protective Wax Sealant (+$20)')">
-                <span class="at-check">✓</span>
-                <span class="at-name">Protective Wax Sealant</span>
-                <span class="at-price">+$20</span>
-              </button>
-            </div>
-
-            <!-- STEP 3: Continue button — only appears after service is chosen -->
-            <button type="button" class="continue-btn" id="continueBtn" onclick="revealForm()">
-              CONTINUE — ENTER YOUR INFO →
-            </button>
-
-          </div><!-- /svc-selector -->
-
-          <!-- Contact form — hidden until Continue is clicked -->
-          <div id="calPrompt" class="cal-prompt">
-            <div class="prompt-icon">📅</div>
-            Select a service above, then click Continue to enter your details
-          </div>
-
-          <div class="cal-embed-wrap" id="calWrap" style="display:none;">
-
-            <form id="requestForm" class="request-form"
-                  action="https://formspree.io/f/xljrlbja"
-                  method="POST" onsubmit="submitRequest(event)">
-
-              <input type="hidden" name="_subject" value="New Appointment Request — Premium Finish Auto Detailing">
-              <input type="hidden" name="Service" id="formService">
-              <input type="hidden" name="Add-ons" id="formAddons">
-
-              <div class="form-row">
-                <label class="form-label" for="reqName">Full Name</label>
-                <input class="form-input" type="text" id="reqName" name="Name" required placeholder="Jane Smith" autocomplete="name">
-              </div>
-
-              <div class="form-row-split">
-                <div class="form-row">
-                  <label class="form-label" for="reqEmail">Email</label>
-                  <input class="form-input" type="email" id="reqEmail" name="Email" required placeholder="jane@email.com" autocomplete="email">
-                </div>
-                <div class="form-row">
-                  <label class="form-label" for="reqPhone">Phone</label>
-                  <input class="form-input" type="tel" id="reqPhone" name="Phone" required placeholder="315-555-0123" autocomplete="tel">
-                </div>
-              </div>
-
-              <div class="form-row">
-                <label class="form-label" for="reqAddress">Address / Location</label>
-                <input class="form-input" type="text" id="reqAddress" name="Address" required placeholder="Where should we come to you?" autocomplete="street-address">
-              </div>
-
-              <div class="form-row">
-                <label class="form-label" for="reqNotes">Notes / Vehicle Details <span class="form-optional">(optional)</span></label>
-                <textarea class="form-input form-textarea" id="reqNotes" name="Notes" placeholder="Preferred day/time, vehicle make & model, anything else we should know"></textarea>
-              </div>
-
-              <button type="submit" class="continue-btn visible" id="requestSubmitBtn">
-                REQUEST THE APPOINTMENT
-              </button>
-
-            </form>
-
-            <!-- Shown after a successful submission -->
-            <div id="requestSuccess" class="request-success" style="display:none;">
-              <div class="prompt-icon">✅</div>
-              <p><strong>Request sent!</strong></p>
-              <p>We got your details and will reach out shortly to confirm your appointment time.</p>
-              <div id="crmStatus" style="font-size:0.72rem; color:#666; margin-top:1rem; letter-spacing:0.5px;"></div>
-            </div>
-
-          </div>
-
-        </div><!-- /right column -->
-
-      </div><!-- /booking-layout -->
+  <!-- WHY PREMIUM FINISH -->
+  <section id="why">
+    <div class="wrap why">
+      <div>
+        <span class="eyebrow r">Why Premium Finish</span>
+        <h2 class="h-display s-title r">Every detail<br><span class="grad-text">matters.</span></h2>
+        <p class="s-lead r r2">We're a local detailer, not a franchise. Every car gets a careful hand wash and slow, careful work on every surface — from daily drivers to weekend cars.</p>
+      </div>
+      <div class="stats">
+        <div class="stat r"><strong class="h-display">100%</strong><span>mobile — we come to you</span></div>
+        <div class="stat r r2"><strong class="h-display">5.0★</strong><span>10 Google reviews, all five stars</span></div>
+        <div class="stat r r3"><strong class="h-display">Hand</strong><span>wash only — no automated brushes</span></div>
+      </div>
     </div>
   </section>
 
 
   <!-- ============================================================
-       FINAL CTA + FOOTER
+       FOOTER — same on every page.
   ============================================================ -->
   <footer>
     <div class="wrap">
       <div class="cta-band r">
         <div>
-          <h2 class="h-display">Ready for that<br><span class="grad-text">premium finish?</span></h2>
-          <p>We bring the detail shop to you. Request a time in under a minute.</p>
+          <h2 class="h-display">Your driveway.<br><span class="grad-text">Our detail.</span></h2>
+          <p>Book online in under a minute, or text us a photo of your vehicle for a quick quote.</p>
         </div>
         <div class="hero-ctas">
-          <a href="#booking" class="btn btn-primary">Book a Detail <svg class="btn-arrow"><use href="#i-arrow"/></svg></a>
-          <a href="sms:+13156419988" class="btn btn-ghost"><svg><use href="#i-msg"/></svg>Text Us</a>
+          <a href="book.html" class="btn btn-primary">Book your detail <svg class="btn-arrow"><use href="#i-arrow"/></svg></a>
+          <a href="sms:+13156419988" class="btn btn-ghost"><svg><use href="#i-msg"/></svg>Text 315-641-9988</a>
         </div>
       </div>
 
       <div class="foot">
         <div>
           <img src="images/logo.png" alt="Premium Finish Auto Detailing">
-          <p>Mobile auto detailing. We come to you — your house, work, or apartment.</p>
+          <p>Mobile auto detailing in Syracuse &amp; the 315 area. We come to you — your house, work, or apartment.</p>
           <div class="foot-social">
             <a href="https://www.instagram.com/premiumfinishcny/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-insta"/></svg></a>
             <a href="https://www.facebook.com/premiumfinishautodetailing" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
@@ -818,12 +348,12 @@
         <div>
           <h4>Explore</h4>
           <ul>
-            <li><a href="#services">Services &amp; Pricing</a></li>
-            <li><a href="#plans">Maintenance Plans</a></li>
-            <li><a href="#results">Before &amp; After</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#process">How It Works</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="services.html">Packages &amp; Pricing</a></li>
+            <li><a href="services.html#plans">Maintenance Plans</a></li>
+            <li><a href="services.html#addons">Add-ons</a></li>
+            <li><a href="gallery.html">Before &amp; After</a></li>
+            <li><a href="gallery.html#reviews">Reviews</a></li>
+            <li><a href="services.html#faq">FAQ</a></li>
           </ul>
         </div>
         <div>
@@ -834,13 +364,12 @@
             <li><a href="mailto:Premiumfinishcny@gmail.com">Premiumfinishcny@gmail.com</a></li>
             <li><a href="https://www.instagram.com/premiumfinishcny/" target="_blank" rel="noopener">Instagram @premiumfinishcny</a></li>
             <li><a href="https://www.facebook.com/premiumfinishautodetailing" target="_blank" rel="noopener">Facebook</a></li>
-            <li><a href="https://www.google.com/maps/place/?q=place_id:ChIJMW43I-AZ2WYRtVZ7ajFmMa0" target="_blank" rel="noopener">Google reviews</a></li>
-            <li><a href="#booking">Request an appointment</a></li>
+            <li><a href="book.html">Request an appointment</a></li>
           </ul>
         </div>
       </div>
       <div class="f-copy">
-        <span>© <span id="yr">2025</span> Premium Finish Auto Detailing. All rights reserved.</span>
+        <span>© <span id="yr">2026</span> Premium Finish Auto Detailing. All rights reserved.</span>
         <span>Premium Finish, Driven by Perfection</span>
       </div>
     </div>
@@ -849,12 +378,12 @@
   <!-- sticky mobile actions -->
   <div class="mobile-bar" id="mobileBar">
     <a class="btn btn-ghost" href="tel:+13156419988"><svg><use href="#i-phone"/></svg>Call</a>
-    <a class="btn btn-primary" href="#booking">Book Now</a>
+    <a class="btn btn-ghost" href="sms:+13156419988"><svg><use href="#i-msg"/></svg>Text</a>
+    <a class="btn btn-primary" href="book.html">Book</a>
   </div>
 
 
-  <script src="js/main.js?v=202611190236"></script>
-  <script src="js/booking.js?v=202611190236"></script>
+  <script src="js/main.js?v=202611190352"></script>
 
 </body>
 </html>
