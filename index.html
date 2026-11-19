@@ -138,7 +138,7 @@
       border-bottom-color: var(--line);
     }
     .nav-inner { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
-    .logo img { height: 46px; width: auto; mix-blend-mode: screen; }
+    .logo img { height: 46px; width: auto; }
     .logo-text { display: none; font-family: var(--display); font-stretch: 125%; font-weight: 800; letter-spacing: .02em; }
     .nav-links { display: flex; gap: 2.2rem; list-style: none; }
     .nav-links a {
@@ -319,7 +319,7 @@
     }
     .svc-icon svg { width: 26px; height: 26px; }
     .svc-name { font-size: 1.6rem; margin-bottom: .5rem; }
-    .svc-desc { color: var(--muted); font-size: .94rem; min-height: 3em; }
+    .svc-desc { color: var(--muted); font-size: .94rem; }
     .svc-price { margin: 1.6rem 0 1.4rem; padding-bottom: 1.4rem; border-bottom: 1px solid var(--line); }
     .svc-price small { display: block; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); font-weight: 700; margin-bottom: .2rem; }
     .svc-price .amt { font-family: var(--display); font-stretch: 110%; font-weight: 800; font-size: 3rem; line-height: 1; }
@@ -346,6 +346,19 @@
     .addon:hover { border-color: rgba(242,113,58,.45); background: rgba(242,113,58,.04); }
     .addon span { font-size: .88rem; font-weight: 600; color: #dedcd8; }
     .addon strong { font-family: var(--display); font-stretch: 110%; font-size: 1.25rem; color: var(--orange); }
+
+    .price-note { color: var(--dim); font-size: .84rem; text-align: center; max-width: 760px; margin: 1.6rem auto 0; }
+    #plans { background: var(--bg); border-top: 1px solid var(--line); }
+    .plans-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 880px; margin: 0 auto; }
+    .plan-kicker { font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--orange); margin-bottom: .6rem; }
+    .amt .per { font-family: var(--body); font-size: 1rem; font-weight: 600; color: var(--muted); margin-left: .4rem; letter-spacing: 0; }
+    .plan-perks {
+      max-width: 880px; margin: 20px auto 0; padding: 1.2rem 1.6rem; border-radius: var(--radius);
+      border: 1px solid rgba(242,113,58,.3); background: var(--card);
+      display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; justify-content: center; align-items: center; font-size: .9rem; color: var(--muted);
+    }
+    .plan-perks strong { color: var(--orange); letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; width: 100%; text-align: center; }
+    .plan-perks span::before { content: '\2713'; color: var(--orange); margin-right: .45rem; font-weight: 800; }
 
     /* ============================================================
        RESULTS — drag-to-compare before/after
@@ -621,7 +634,7 @@
 
     footer { background: var(--bg); padding-bottom: 2.5rem; }
     .foot { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem; padding: 3rem 0; border-top: 1px solid var(--line); }
-    .foot img { height: 54px; width: auto; margin-bottom: 1rem; mix-blend-mode: screen; }
+    .foot img { height: 54px; width: auto; margin-bottom: 1rem; }
     .foot p, .foot li { color: var(--muted); font-size: .92rem; }
     .foot h4 { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--dim); margin-bottom: 1rem; }
     .foot ul { list-style: none; display: grid; gap: .55rem; }
@@ -673,7 +686,7 @@
       .hero-inner { gap: .5rem; }
       .hero-badge { display: none; }
       .scroll-cue { display: none; }
-      .services-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; gap: 28px; }
+      .services-grid, .plans-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; gap: 28px; }
       .feature, .faq-wrap, .booking-layout { grid-template-columns: 1fr; }
       .feature-media { max-width: 520px; }
       .foot { grid-template-columns: 1fr 1fr; }
@@ -729,6 +742,7 @@
       </a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
+        <li><a href="#plans">Plans</a></li>
         <li><a href="#results">Results</a></li>
         <li><a href="#process">How It Works</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -743,6 +757,7 @@
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="#services">Services</a>
+      <a href="#plans">Plans</a>
       <a href="#results">Results</a>
       <a href="#process">How It Works</a>
       <a href="#faq">FAQ</a>
@@ -795,23 +810,23 @@
   <div class="strip" aria-hidden="true">
     <div class="strip-track">
       <div class="strip-item">
-        <span>Exterior Wash</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Interior Detail</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Full Package</span><svg class="star"><use href="#i-star"/></svg>
+        <span>Express Detail</span><svg class="star"><use href="#i-star"/></svg>
+        <span>Executive Detail</span><svg class="star"><use href="#i-star"/></svg>
+        <span>Premium Finish</span><svg class="star"><use href="#i-star"/></svg>
         <span>Engine Bay Cleaning</span><svg class="star"><use href="#i-star"/></svg>
         <span>Trim Restoration</span><svg class="star"><use href="#i-star"/></svg>
         <span>Headlight Restoration</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Pet Hair Removal</span><svg class="star"><use href="#i-star"/></svg>
+        <span>Monthly Plans</span><svg class="star"><use href="#i-star"/></svg>
         <span>We Come To You</span><svg class="star"><use href="#i-star"/></svg>
       </div>
       <div class="strip-item">
-        <span>Exterior Wash</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Interior Detail</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Full Package</span><svg class="star"><use href="#i-star"/></svg>
+        <span>Express Detail</span><svg class="star"><use href="#i-star"/></svg>
+        <span>Executive Detail</span><svg class="star"><use href="#i-star"/></svg>
+        <span>Premium Finish</span><svg class="star"><use href="#i-star"/></svg>
         <span>Engine Bay Cleaning</span><svg class="star"><use href="#i-star"/></svg>
         <span>Trim Restoration</span><svg class="star"><use href="#i-star"/></svg>
         <span>Headlight Restoration</span><svg class="star"><use href="#i-star"/></svg>
-        <span>Pet Hair Removal</span><svg class="star"><use href="#i-star"/></svg>
+        <span>Monthly Plans</span><svg class="star"><use href="#i-star"/></svg>
         <span>We Come To You</span><svg class="star"><use href="#i-star"/></svg>
       </div>
     </div>
@@ -839,64 +854,73 @@
 
       <div class="services-grid">
 
-        <!-- CARD 1: Exterior Wash -->
         <article class="svc r">
           <div class="svc-icon"><svg><use href="#i-drop"/></svg></div>
-          <h3 class="h-display svc-name">Exterior Wash</h3>
-          <p class="svc-desc">A careful hand wash that brings back the gloss.</p>
+          <h3 class="h-display svc-name">Express Detail</h3>
+          <p class="svc-desc">A quick, detailed clean.</p>
           <div class="svc-price">
-            <small>Starting at</small>
-            <div class="amt"><sup>$</sup><span class="amt-num" data-sedan="60" data-suv="70">60</span><span class="plus">+</span></div>
+            <small class="amt-label" data-sedan="Sedan" data-suv="SUV / Truck">Sedan</small>
+            <div class="amt"><sup>$</sup><span class="amt-num" data-sedan="129" data-suv="159">129</span></div>
           </div>
           <ul class="svc-list">
-            <li><svg><use href="#i-check"/></svg>Deep hand wash &amp; foam bath</li>
-            <li><svg><use href="#i-check"/></svg>All grime &amp; bugs removed</li>
-            <li><svg><use href="#i-check"/></svg>Exterior windows streak-free</li>
-            <li><svg><use href="#i-check"/></svg>Rims &amp; wheels cleaned and shined</li>
-            <li><svg><use href="#i-check"/></svg>Trim shined</li>
-          </ul>
-          <button class="btn btn-ghost" data-book="ext">Book Exterior <svg class="btn-arrow"><use href="#i-arrow"/></svg></button>
-        </article>
-
-        <!-- CARD 2: Full Package (featured) -->
-        <article class="svc featured r r2">
-          <span class="svc-tag">Best Value</span>
-          <div class="svc-icon"><svg><use href="#i-spark"/></svg></div>
-          <h3 class="h-display svc-name">Full Package</h3>
-          <p class="svc-desc">The complete inside-and-out transformation.</p>
-          <div class="svc-price">
-            <small>Starting at</small>
-            <div class="amt"><sup>$</sup><span class="amt-num" data-sedan="140" data-suv="160">140</span><span class="plus">+</span></div>
-          </div>
-          <ul class="svc-list">
-            <li><svg><use href="#i-check"/></svg>Everything in the Exterior Wash</li>
-            <li><svg><use href="#i-check"/></svg>Everything in the Interior Detail</li>
-            <li><svg><use href="#i-check"/></svg>Complete inside &amp; outside transformation</li>
-            <li><svg><use href="#i-check"/></svg>Best price vs. booking separately</li>
-          </ul>
-          <button class="btn btn-primary" data-book="full">Book Full Package <svg class="btn-arrow"><use href="#i-arrow"/></svg></button>
-        </article>
-
-        <!-- CARD 3: Interior Detail -->
-        <article class="svc r r3">
-          <div class="svc-icon"><svg><use href="#i-seat"/></svg></div>
-          <h3 class="h-display svc-name">Interior Detail</h3>
-          <p class="svc-desc">Every surface, crack and crevice — reset.</p>
-          <div class="svc-price">
-            <small>Starting at</small>
-            <div class="amt"><sup>$</sup><span class="amt-num" data-sedan="100" data-suv="120">100</span><span class="plus">+</span></div>
-          </div>
-          <ul class="svc-list">
-            <li><svg><use href="#i-check"/></svg>Full vacuum — carpets, cracks, crevices</li>
-            <li><svg><use href="#i-check"/></svg>Complete wipe down of all surfaces</li>
-            <li><svg><use href="#i-check"/></svg>Floor mats dressed</li>
-            <li><svg><use href="#i-check"/></svg>Interior windows streak-free</li>
+            <li><svg><use href="#i-check"/></svg>Deep wipe-down of all surfaces</li>
+            <li><svg><use href="#i-check"/></svg>Thorough vacuum of all carpets</li>
+            <li><svg><use href="#i-check"/></svg>Cracks &amp; crevices cleaned</li>
+            <li><svg><use href="#i-check"/></svg>Floor mats cleaned &amp; dressed</li>
+            <li><svg><use href="#i-check"/></svg>All windows cleaned</li>
             <li><svg><use href="#i-check"/></svg>Door jambs cleaned</li>
+            <li><svg><use href="#i-check"/></svg>Hand wash &amp; foam bath</li>
+            <li><svg><use href="#i-check"/></svg>Rims &amp; tires cleaned + shined</li>
           </ul>
-          <button class="btn btn-ghost" data-book="int">Book Interior <svg class="btn-arrow"><use href="#i-arrow"/></svg></button>
+          <button class="btn btn-ghost" data-book="express">Book Express Detail <svg class="btn-arrow"><use href="#i-arrow"/></svg></button>
+        </article>
+        <article class="svc featured r r2">
+          <span class="svc-tag">Most Popular</span>
+          <div class="svc-icon"><svg><use href="#i-spark"/></svg></div>
+          <h3 class="h-display svc-name">Executive Detail</h3>
+          <p class="svc-desc">Deeper clean &amp; protection.</p>
+          <div class="svc-price">
+            <small class="amt-label" data-sedan="Sedan" data-suv="SUV / Truck">Sedan</small>
+            <div class="amt"><sup>$</sup><span class="amt-num" data-sedan="229" data-suv="259">229</span></div>
+          </div>
+          <ul class="svc-list">
+            <li><svg><use href="#i-check"/></svg>Everything in Express Detail</li>
+            <li><svg><use href="#i-check"/></svg>Light pet hair removal</li>
+            <li><svg><use href="#i-check"/></svg>Light carpet shampoo</li>
+            <li><svg><use href="#i-check"/></svg>Light stain removal</li>
+            <li><svg><use href="#i-check"/></svg>Leather conditioned</li>
+            <li><svg><use href="#i-check"/></svg>All surfaces deeply scrubbed</li>
+            <li><svg><use href="#i-check"/></svg>Interior steamed &amp; sanitized</li>
+            <li><svg><use href="#i-check"/></svg>Iron removal treatment</li>
+            <li><svg><use href="#i-check"/></svg>Protective wax sealant applied</li>
+          </ul>
+          <button class="btn btn-primary" data-book="exec">Book Executive Detail <svg class="btn-arrow"><use href="#i-arrow"/></svg></button>
+        </article>
+        <article class="svc r r3">
+          <div class="svc-icon"><svg><use href="#i-shield"/></svg></div>
+          <h3 class="h-display svc-name">Premium Finish</h3>
+          <p class="svc-desc">Full restoration &amp; protection.</p>
+          <div class="svc-price">
+            <small class="amt-label" data-sedan="Sedan" data-suv="SUV / Truck">Sedan</small>
+            <div class="amt"><sup>$</sup><span class="amt-num" data-sedan="349" data-suv="379">349</span></div>
+          </div>
+          <ul class="svc-list">
+            <li><svg><use href="#i-check"/></svg>Everything in Executive Detail</li>
+            <li><svg><use href="#i-check"/></svg>Heavy stain removal</li>
+            <li><svg><use href="#i-check"/></svg>Full pet hair removal</li>
+            <li><svg><use href="#i-check"/></svg>Deep carpet shampoo</li>
+            <li><svg><use href="#i-check"/></svg>Full interior steam cleaned</li>
+            <li><svg><use href="#i-check"/></svg>UV protectant on all plastics</li>
+            <li><svg><use href="#i-check"/></svg>Trims &amp; plastics dressed</li>
+            <li><svg><use href="#i-check"/></svg>Clay bar treatment</li>
+            <li><svg><use href="#i-check"/></svg>Complete restoration finish</li>
+          </ul>
+          <button class="btn btn-ghost" data-book="prem">Book Premium Finish <svg class="btn-arrow"><use href="#i-arrow"/></svg></button>
         </article>
 
       </div>
+
+      <p class="price-note r">Final pricing is determined by vehicle condition. Package selection is based on the level of care required to deliver professional results — entry-level packages apply only to vehicles in suitable condition.</p>
 
       <div class="addons r">
         <div class="addons-label">Add-ons<small>Stack onto any package</small></div>
@@ -906,6 +930,58 @@
         <div class="addon"><span>Clay Bar &amp; Paint Decon</span><strong>+$50</strong></div>
         <div class="addon"><span>Headlight Restoration</span><strong>+$100</strong></div>
         <div class="addon"><span>Protective Wax Sealant</span><strong>+$20</strong></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       MAINTENANCE PLANS
+  ============================================================ -->
+  <section id="plans">
+    <div class="wrap">
+      <div class="s-head center">
+        <span class="eyebrow r">Maintenance Plans</span>
+        <h2 class="h-display s-title r">Consistent care.<br><span class="grad-text">Exceptional results.</span></h2>
+        <p class="s-lead r r2">Keep your vehicle looking its best all year round. Regular detailing protects your investment, maintains value, and keeps every drive feeling like the first.</p>
+      </div>
+      <div class="plans-grid">
+        <article class="svc r">
+          <span class="plan-kicker">Keep it clean</span>
+          <h3 class="h-display svc-name">Basic</h3>
+          <div class="svc-price">
+            <small>Sedan · SUV / Truck +$15</small>
+            <div class="amt"><sup>$</sup>89<span class="per">/ month</span></div>
+          </div>
+          <ul class="svc-list">
+            <li><svg><use href="#i-check"/></svg>Interior wipe-down</li>
+            <li><svg><use href="#i-check"/></svg>Exterior wash</li>
+            <li><svg><use href="#i-check"/></svg>Wheels &amp; tires cleaned</li>
+            <li><svg><use href="#i-check"/></svg>Windows cleaned</li>
+            <li><svg><use href="#i-check"/></svg>Deep vacuum</li>
+          </ul>
+          <button class="btn btn-ghost" data-book="basic">Enroll in Basic <svg class="btn-arrow"><use href="#i-arrow"/></svg></button>
+        </article>
+        <article class="svc featured r r2">
+          <span class="plan-kicker">Ultimate protection</span>
+          <h3 class="h-display svc-name">Premium</h3>
+          <div class="svc-price">
+            <small>Sedan · SUV / Truck +$15</small>
+            <div class="amt"><sup>$</sup>119<span class="per">/ month</span></div>
+          </div>
+          <ul class="svc-list">
+            <li><svg><use href="#i-check"/></svg>Interior &amp; exterior detail</li>
+            <li><svg><use href="#i-check"/></svg>Leather conditioned</li>
+            <li><svg><use href="#i-check"/></svg>Protective wax sealant</li>
+            <li><svg><use href="#i-check"/></svg>Plastics UV protected</li>
+            <li><svg><use href="#i-check"/></svg>Surfaces steamed &amp; sanitized</li>
+          </ul>
+          <button class="btn btn-primary" data-book="premplan">Enroll in Premium <svg class="btn-arrow"><use href="#i-arrow"/></svg></button>
+        </article>
+      </div>
+      <div class="plan-perks r">
+        <strong>Flexible · Convenient · Always Premium</strong>
+        <span>Monthly plans</span><span>Cancel anytime</span><span>Consistent results</span>
       </div>
     </div>
   </section>
@@ -938,7 +1014,7 @@
             <div class="compare-line"></div>
             <div class="compare-handle"><svg><use href="#i-drag"/></svg></div>
           </div>
-          <div class="compare-cap"><strong>Wheels &amp; Tires</strong><span>Exterior Wash</span></div>
+          <div class="compare-cap"><strong>Wheels &amp; Tires</strong><span>Exterior</span></div>
         </div>
 
         <div class="compare-card r r2">
@@ -950,7 +1026,7 @@
             <div class="compare-line"></div>
             <div class="compare-handle"><svg><use href="#i-drag"/></svg></div>
           </div>
-          <div class="compare-cap"><strong>Front Cabin</strong><span>Interior Detail</span></div>
+          <div class="compare-cap"><strong>Front Cabin</strong><span>Interior</span></div>
         </div>
 
         <div class="compare-card r r3">
@@ -962,7 +1038,7 @@
             <div class="compare-line"></div>
             <div class="compare-handle"><svg><use href="#i-drag"/></svg></div>
           </div>
-          <div class="compare-cap"><strong>Truck Interior</strong><span>Interior Detail</span></div>
+          <div class="compare-cap"><strong>Truck Interior</strong><span>Interior</span></div>
         </div>
 
         <div class="compare-card r r4">
@@ -974,7 +1050,7 @@
             <div class="compare-line"></div>
             <div class="compare-handle"><svg><use href="#i-drag"/></svg></div>
           </div>
-          <div class="compare-cap"><strong>Rear Seats &amp; Floors</strong><span>Interior Detail</span></div>
+          <div class="compare-cap"><strong>Rear Seats &amp; Floors</strong><span>Interior</span></div>
         </div>
       </div>
     </div>
@@ -1019,7 +1095,7 @@
           <li class="r r2"><span class="fi"><svg><use href="#i-spark"/></svg></span><div><strong>Every surface wiped down</strong><span>Dash, console, door panels and jambs cleaned top to bottom.</span></div></li>
           <li class="r r3"><span class="fi"><svg><use href="#i-shield"/></svg></span><div><strong>Streak-free glass, inside &amp; out</strong><span>Clear windows for a cabin that looks as good as it feels.</span></div></li>
         </ul>
-        <a href="#booking" class="btn btn-primary r">Book an Interior Detail <svg class="btn-arrow"><use href="#i-arrow"/></svg></a>
+        <a href="#booking" class="btn btn-primary r">Book a Detail <svg class="btn-arrow"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </section>
@@ -1041,12 +1117,16 @@
           <div class="ans">Wherever your car is. We're fully mobile — we come to your house, your work, or your apartment, so there's no drop-off and no waiting around.</div>
         </details>
         <details>
-          <summary>Why do the prices have a "+"?<span class="pm"></span></summary>
-          <div class="ans">Our listed prices are starting points for a typical sedan/coupe or SUV/truck. Vehicles that are especially large or heavily soiled may cost a bit more — we'll always confirm the price with you before we start.</div>
+          <summary>Is the listed price final?<span class="pm"></span></summary>
+          <div class="ans">Final pricing is determined by vehicle condition. Package selection is based on the level of care required to deliver professional results — entry-level packages apply only to vehicles in suitable condition. SUVs and trucks are +$30 on packages and +$15/month on maintenance plans.</div>
         </details>
         <details>
-          <summary>What's included in the Full Package?<span class="pm"></span></summary>
-          <div class="ans">Everything in our Exterior Wash plus everything in our Interior Detail — a complete inside-and-out transformation, at a better price than booking both separately.</div>
+          <summary>Which package is right for me?<span class="pm"></span></summary>
+          <div class="ans">Express Detail is a quick, detailed clean inside and out. Executive Detail adds a deeper clean and protection — light shampoo, stain and pet hair removal, steam, leather conditioning and wax sealant. Premium Finish is our full restoration: heavy stains, full pet hair removal, deep shampoo, clay bar and UV protection.</div>
+        </details>
+        <details>
+          <summary>How do maintenance plans work?<span class="pm"></span></summary>
+          <div class="ans">Pick Basic ($89/month) or Premium ($119/month) and we'll keep your vehicle looking its best on a regular schedule. Plans are monthly and you can cancel anytime.</div>
         </details>
         <details>
           <summary>How do I book?<span class="pm"></span></summary>
@@ -1090,6 +1170,7 @@
             <div class="contact-actions">
               <a class="btn btn-ghost" href="tel:+13156419988"><svg><use href="#i-phone"/></svg>Call</a>
               <a class="btn btn-ghost" href="sms:+13156419988"><svg><use href="#i-msg"/></svg>Text</a>
+              <a class="btn btn-ghost" href="mailto:Premiumfinishcny@gmail.com">Email</a>
             </div>
           </div>
 
@@ -1115,28 +1196,44 @@
                 <span class="trigger-arrow">▾</span>
               </button>
               <div class="svc-dropdown-menu" id="svcMenu">
-                <div class="svc-option-group">Exterior Wash</div>
-                <button type="button" class="svc-option" data-key="ext-sedan" onclick="pickService(this, 'Exterior Wash — Sedan ($60+)', 'Exterior Wash — Sedan')">
-                  Sedan / Coupe <span class="opt-price">$60+</span>
+                <div class="svc-option-group">Express Detail</div>
+                <button type="button" class="svc-option" data-key="express-sedan" onclick="pickService(this, 'Express Detail — Sedan ($129)', 'Express Detail — Sedan')">
+                  Sedan <span class="opt-price">$129</span>
                 </button>
-                <button type="button" class="svc-option" data-key="ext-suv" onclick="pickService(this, 'Exterior Wash — SUV/Truck ($70+)', 'Exterior Wash — SUV/Truck')">
-                  SUV / Truck <span class="opt-price">$70+</span>
-                </button>
-
-                <div class="svc-option-group">Interior Detail</div>
-                <button type="button" class="svc-option" data-key="int-sedan" onclick="pickService(this, 'Interior Detail — Sedan ($100+)', 'Interior Detail — Sedan')">
-                  Sedan / Coupe <span class="opt-price">$100+</span>
-                </button>
-                <button type="button" class="svc-option" data-key="int-suv" onclick="pickService(this, 'Interior Detail — SUV/Truck ($120+)', 'Interior Detail — SUV/Truck')">
-                  SUV / Truck <span class="opt-price">$120+</span>
+                <button type="button" class="svc-option" data-key="express-suv" onclick="pickService(this, 'Express Detail — SUV/Truck ($159)', 'Express Detail — SUV/Truck')">
+                  SUV / Truck <span class="opt-price">$159</span>
                 </button>
 
-                <div class="svc-option-group">Full Package</div>
-                <button type="button" class="svc-option" data-key="full-sedan" onclick="pickService(this, 'Full Package — Sedan ($140+)', 'Full Package — Sedan')">
-                  Sedan / Coupe <span class="opt-price">$140+</span>
+                <div class="svc-option-group">Executive Detail</div>
+                <button type="button" class="svc-option" data-key="exec-sedan" onclick="pickService(this, 'Executive Detail — Sedan ($229)', 'Executive Detail — Sedan')">
+                  Sedan <span class="opt-price">$229</span>
                 </button>
-                <button type="button" class="svc-option" data-key="full-suv" onclick="pickService(this, 'Full Package — SUV/Truck ($160+)', 'Full Package — SUV/Truck')">
-                  SUV / Truck <span class="opt-price">$160+</span>
+                <button type="button" class="svc-option" data-key="exec-suv" onclick="pickService(this, 'Executive Detail — SUV/Truck ($259)', 'Executive Detail — SUV/Truck')">
+                  SUV / Truck <span class="opt-price">$259</span>
+                </button>
+
+                <div class="svc-option-group">Premium Finish</div>
+                <button type="button" class="svc-option" data-key="prem-sedan" onclick="pickService(this, 'Premium Finish — Sedan ($349)', 'Premium Finish — Sedan')">
+                  Sedan <span class="opt-price">$349</span>
+                </button>
+                <button type="button" class="svc-option" data-key="prem-suv" onclick="pickService(this, 'Premium Finish — SUV/Truck ($379)', 'Premium Finish — SUV/Truck')">
+                  SUV / Truck <span class="opt-price">$379</span>
+                </button>
+
+                <div class="svc-option-group">Basic Maintenance Plan</div>
+                <button type="button" class="svc-option" data-key="basic-sedan" onclick="pickService(this, 'Basic Maintenance Plan — Sedan ($89/mo)', 'Basic Maintenance Plan — Sedan')">
+                  Sedan <span class="opt-price">$89/mo</span>
+                </button>
+                <button type="button" class="svc-option" data-key="basic-suv" onclick="pickService(this, 'Basic Maintenance Plan — SUV/Truck ($104/mo)', 'Basic Maintenance Plan — SUV/Truck')">
+                  SUV / Truck <span class="opt-price">$104/mo</span>
+                </button>
+
+                <div class="svc-option-group">Premium Maintenance Plan</div>
+                <button type="button" class="svc-option" data-key="premplan-sedan" onclick="pickService(this, 'Premium Maintenance Plan — Sedan ($119/mo)', 'Premium Maintenance Plan — Sedan')">
+                  Sedan <span class="opt-price">$119/mo</span>
+                </button>
+                <button type="button" class="svc-option" data-key="premplan-suv" onclick="pickService(this, 'Premium Maintenance Plan — SUV/Truck ($134/mo)', 'Premium Maintenance Plan — SUV/Truck')">
+                  SUV / Truck <span class="opt-price">$134/mo</span>
                 </button>
               </div>
             </div>
@@ -1280,6 +1377,7 @@
           <h4>Explore</h4>
           <ul>
             <li><a href="#services">Services &amp; Pricing</a></li>
+            <li><a href="#plans">Maintenance Plans</a></li>
             <li><a href="#results">Before &amp; After</a></li>
             <li><a href="#process">How It Works</a></li>
             <li><a href="#faq">FAQ</a></li>
@@ -1290,13 +1388,14 @@
           <ul>
             <li><a href="tel:+13156419988">Call 315-641-9988</a></li>
             <li><a href="sms:+13156419988">Text 315-641-9988</a></li>
+            <li><a href="mailto:Premiumfinishcny@gmail.com">Premiumfinishcny@gmail.com</a></li>
             <li><a href="#booking">Request an appointment</a></li>
           </ul>
         </div>
       </div>
       <div class="f-copy">
         <span>© <span id="yr">2025</span> Premium Finish Auto Detailing. All rights reserved.</span>
-        <span>Mobile Service · We Come To You</span>
+        <span>Premium Finish, Driven by Perfection</span>
       </div>
     </div>
   </footer>
@@ -1364,6 +1463,7 @@
         n.classList.add('swap');
         setTimeout(() => { n.textContent = n.dataset[vehicle]; n.classList.remove('swap'); }, 180);
       });
+      document.querySelectorAll('.amt-label').forEach(l => { l.textContent = l.dataset[vehicle]; });
     }));
     window.addEventListener('resize', placePill);
     document.fonts && document.fonts.ready.then(placePill);
