@@ -46,6 +46,8 @@
     <symbol id="i-drag" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></symbol>
     <symbol id="i-vac" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h8M7 21v-6a4 4 0 0 1 4-4h2a4 4 0 0 0 4-4V3"/><path d="M14 3h6"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-google" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.3c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.5c2-1.9 3.3-4.7 3.3-8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.2-2.7l-3.5-2.7c-1 .7-2.2 1-3.7 1-2.8 0-5.2-1.9-6.1-4.5H2.3v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.9 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.3a11 11 0 0 0 0 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.6l3.1-3.1A11 11 0 0 0 2.3 7.1l3.6 2.8C6.8 7.3 9.2 5.4 12 5.4z"/></symbol>
   </svg>
 
   <!-- ============================================================
@@ -62,10 +64,12 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#plans">Plans</a></li>
         <li><a href="#results">Results</a></li>
+        <li><a href="#reviews">Reviews</a></li>
         <li><a href="#process">How It Works</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <div class="nav-cta">
+        <a class="nav-ig" href="https://www.instagram.com/premiumfinishcny/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-insta"/></svg></a>
         <a class="nav-phone" href="tel:+13156419988"><svg><use href="#i-phone"/></svg>315-641-9988</a>
         <a class="btn btn-primary" href="#booking">Book a Detail</a>
         <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -77,6 +81,7 @@
       <a href="#services">Services</a>
       <a href="#plans">Plans</a>
       <a href="#results">Results</a>
+      <a href="#reviews">Reviews</a>
       <a href="#process">How It Works</a>
       <a href="#faq">FAQ</a>
       <a class="btn btn-primary" href="#booking">Book a Detail</a>
@@ -114,10 +119,10 @@
       <div class="hero-visual in d3">
         <img class="hero-car" src="images/logo4.png" alt="Dark sports car with glowing headlights" />
         <div class="hero-floor"></div>
-        <div class="hero-badge">
-          <span class="dot"></span>
-          <div><small>Call or text</small><strong>Booking now</strong></div>
-        </div>
+        <a class="hero-badge" href="#reviews">
+          <svg class="badge-g"><use href="#i-google"/></svg>
+          <div><small>Google rating</small><strong>5.0 ★★★★★ · 10 reviews</strong></div>
+        </a>
       </div>
     </div>
     <div class="scroll-cue" aria-hidden="true"></div>
@@ -375,6 +380,90 @@
 
 
   <!-- ============================================================
+       REVIEWS — real Google Maps reviews (copied word for word).
+       To add one: copy a <figure class="review"> block.
+  ============================================================ -->
+  <section id="reviews">
+    <div class="wrap">
+      <div class="s-head split">
+        <div>
+          <span class="eyebrow r">Reviews</span>
+          <h2 class="h-display s-title r">What customers say</h2>
+          <div class="rating-sum r r2">
+            <span class="rating-num">5.0</span>
+            <div><div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><span>Based on 10 Google reviews</span></div>
+          </div>
+        </div>
+        <div class="rv-actions r r2">
+          <a class="btn btn-ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJMW43I-AZ2WYRtVZ7ajFmMa0" target="_blank" rel="noopener"><svg><use href="#i-google"/></svg>See all on Google</a>
+          <a class="btn btn-primary" href="https://search.google.com/local/writereview?placeid=ChIJMW43I-AZ2WYRtVZ7ajFmMa0" target="_blank" rel="noopener">Leave a review</a>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <figure class="review r">
+          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>“Jerry detailed our BMW today. He was supposed to do it yesterday, but Mother Nature had other plans. He handled the change like a true professional. Instead of just canceling and letting us find someone else he went out of his way to make sure we got taken care of, which in this case meant coming back on a Sunday to do the job. He does top notch work, is super professional and is very nice and easy to work with. I cannot recommend him more if you want to get your car looking like new again. Worth every penny.”</blockquote>
+          <figcaption><span class="rv-avatar">J</span><span><strong>Jonathan S.</strong><small>Google review · BMW</small></span></figcaption>
+        </figure>
+        <figure class="review r r2">
+          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>“I couldn’t be happier with the job Premium Finish Auto Detailing did on my Chevy Blazer. I got the full interior and exterior finish and they made it look better than I ever expected—it’s absolutely spotless inside and out. They paid attention to every little detail, and you can tell they take a lot of pride in their work. The service was professional, friendly, and worth every penny. If you’re looking for a detail that makes your car look and feel brand new, I highly recommend Premium Finish Auto Detailing. I’ll definitely be coming back!”</blockquote>
+          <figcaption><span class="rv-avatar">P</span><span><strong>Preston</strong><small>Google review · Chevy Blazer</small></span></figcaption>
+        </figure>
+        <figure class="review r r3">
+          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>“Jerry did a beautiful job on my piano black Mini Cooper. Inside and out, the car sparkled. It was a brutally hot day and he worked on it for three hours. Rugs, dash, fixtures—immaculate. Wash and wax reasonably priced. I highly recommend him.”</blockquote>
+          <figcaption><span class="rv-avatar">D</span><span><strong>Donna M.</strong><small>Google review · Mini Cooper</small></span></figcaption>
+        </figure>
+        <figure class="review r">
+          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>“Jerry detailed our truck today, we had reached out to him kinda last minute &amp; he made it work! Cleaned it inside and out, it looks like new! Needless to say did a phenomenal job and got into detail! Super friendly and sweet as well! Would highly recommend him (:”</blockquote>
+          <figcaption><span class="rv-avatar">L</span><span><strong>Liz S.</strong><small>Google review · Truck</small></span></figcaption>
+        </figure>
+        <figure class="review r r2">
+          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>“I couldn’t be happier with the detailing job! They arrived on time, were professional, friendly, and paid incredible attention to every detail. My car looks and feels like it just came off the showroom floor. The interior is spotless, the exterior shines beautifully! They went above and beyond my expectations. Highly recommend!”</blockquote>
+          <figcaption><span class="rv-avatar">E</span><span><strong>Elizabeth</strong><small>Google review</small></span></figcaption>
+        </figure>
+        <figure class="review r r3">
+          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>“I got the full Premium Finish on my car and absolutely LOVED it! He took amazing care of my car and left it spotless and protected for the future. If anyone needs their car detailed, make sure they book with Premium Finish Auto Detailing to get that Premium Finish on their car!”</blockquote>
+          <figcaption><span class="rv-avatar">R</span><span><strong>Robert B.</strong><small>Google review</small></span></figcaption>
+        </figure>
+        <figure class="review r">
+          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>“Jerry was great. Job was well done and prices are just right. Excellent work ethic. I will use his services again and again.”</blockquote>
+          <figcaption><span class="rv-avatar">J</span><span><strong>John H.</strong><small>Google review</small></span></figcaption>
+        </figure>
+        <figure class="review r r2">
+          <div class="rv-stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>“Went to premium finish to get my Kia forte gt cleaned and he did an amazing job. Really professional work and great customer service. Definitely recommend if you need your vehicle cleaned!!!!”</blockquote>
+          <figcaption><span class="rv-avatar">C</span><span><strong>Caleb C.</strong><small>Google review · Kia Forte GT</small></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       INSTAGRAM
+  ============================================================ -->
+  <section id="instagram">
+    <div class="wrap">
+      <a class="ig-band r" href="https://www.instagram.com/premiumfinishcny/" target="_blank" rel="noopener">
+        <span class="ig-icon"><svg><use href="#i-insta"/></svg></span>
+        <span class="ig-copy">
+          <span class="eyebrow">Follow the work</span>
+          <strong class="h-display">@premiumfinishcny</strong>
+          <span>Fresh before &amp; afters, ceramic coatings and paint corrections on Instagram.</span>
+        </span>
+        <span class="btn btn-primary">Follow on Instagram <svg class="btn-arrow"><use href="#i-arrow"/></svg></span>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
        PROCESS
   ============================================================ -->
   <section id="process">
@@ -488,6 +577,7 @@
               <a class="btn btn-ghost" href="tel:+13156419988"><svg><use href="#i-phone"/></svg>Call</a>
               <a class="btn btn-ghost" href="sms:+13156419988"><svg><use href="#i-msg"/></svg>Text</a>
               <a class="btn btn-ghost" href="mailto:Premiumfinishcny@gmail.com">Email</a>
+              <a class="btn btn-ghost" href="https://www.instagram.com/premiumfinishcny/" target="_blank" rel="noopener"><svg><use href="#i-insta"/></svg>DM</a>
             </div>
           </div>
 
@@ -684,6 +774,10 @@
         <div>
           <img src="images/logo.png" alt="Premium Finish Auto Detailing">
           <p>Mobile auto detailing. We come to you — your house, work, or apartment.</p>
+          <div class="foot-social">
+            <a href="https://www.instagram.com/premiumfinishcny/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-insta"/></svg></a>
+            <a href="https://www.google.com/maps/place/?q=place_id:ChIJMW43I-AZ2WYRtVZ7ajFmMa0" target="_blank" rel="noopener" aria-label="Google reviews"><svg><use href="#i-google"/></svg></a>
+          </div>
         </div>
         <div>
           <h4>Explore</h4>
@@ -691,6 +785,7 @@
             <li><a href="#services">Services &amp; Pricing</a></li>
             <li><a href="#plans">Maintenance Plans</a></li>
             <li><a href="#results">Before &amp; After</a></li>
+            <li><a href="#reviews">Reviews</a></li>
             <li><a href="#process">How It Works</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
@@ -701,6 +796,8 @@
             <li><a href="tel:+13156419988">Call 315-641-9988</a></li>
             <li><a href="sms:+13156419988">Text 315-641-9988</a></li>
             <li><a href="mailto:Premiumfinishcny@gmail.com">Premiumfinishcny@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/premiumfinishcny/" target="_blank" rel="noopener">Instagram @premiumfinishcny</a></li>
+            <li><a href="https://www.google.com/maps/place/?q=place_id:ChIJMW43I-AZ2WYRtVZ7ajFmMa0" target="_blank" rel="noopener">Google reviews</a></li>
             <li><a href="#booking">Request an appointment</a></li>
           </ul>
         </div>

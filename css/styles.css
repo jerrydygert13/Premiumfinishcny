@@ -377,6 +377,69 @@ nav.top.menu-open .mobile-menu { display: block; }
 .compare.empty { display: grid; place-items: center; color: var(--dim); font-size: .8rem; }
 
 /* ============================================================
+   REVIEWS
+============================================================ */
+#reviews { background: var(--bg); }
+.rating-sum { display: flex; align-items: center; gap: 1rem; }
+.rating-num { font-family: var(--display); font-stretch: 110%; font-weight: 800; font-size: 3.4rem; line-height: 1; }
+.rating-sum div > span { display: block; color: var(--muted); font-size: .9rem; margin-top: .25rem; }
+.rv-stars { display: flex; gap: 3px; color: #fbbc05; }
+.rv-stars svg { width: 18px; height: 18px; }
+.rv-actions { display: flex; gap: .7rem; flex-wrap: wrap; }
+.reviews-grid { columns: 3 320px; column-gap: 20px; }
+.review {
+  break-inside: avoid; margin: 0 0 20px; padding: 1.7rem; border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--card-2), var(--card)); border: 1px solid var(--line);
+  transition: border-color .3s, transform .3s var(--ease);
+}
+.review:hover { border-color: var(--line-2); transform: translateY(-3px); }
+.review blockquote { margin: 1rem 0 1.4rem; color: #dedcd8; font-size: .97rem; line-height: 1.65; }
+.review figcaption { display: flex; align-items: center; gap: .8rem; }
+.review figcaption strong { display: block; font-size: .95rem; }
+.review figcaption small { color: var(--dim); font-size: .8rem; font-weight: 600; }
+.rv-avatar {
+  width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0;
+  background: var(--grad); color: #fff; font-weight: 800;
+}
+
+/* ============================================================
+   INSTAGRAM
+============================================================ */
+#instagram { padding-top: 0; background: var(--bg); }
+.ig-band {
+  display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 2rem;
+  padding: clamp(1.6rem, 4vw, 2.6rem); border-radius: 24px; text-decoration: none;
+  background: linear-gradient(120deg, rgba(131,58,180,.18), rgba(226,56,43,.16) 50%, rgba(252,175,69,.14)), var(--card);
+  border: 1px solid var(--line-2); transition: border-color .3s, transform .3s var(--ease);
+}
+.ig-band:hover { border-color: rgba(242,113,58,.5); transform: translateY(-3px); }
+.ig-icon {
+  width: 76px; height: 76px; border-radius: 22px; display: grid; place-items: center; color: #fff;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.ig-icon svg { width: 40px; height: 40px; }
+.ig-copy strong { display: block; font-size: clamp(1.4rem, 3vw, 2.1rem); margin: .4rem 0 .3rem; }
+.ig-copy > span:last-child { color: var(--muted); }
+
+.nav-ig { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; color: var(--muted); border: 1px solid var(--line-2); transition: color .2s, border-color .2s; }
+.nav-ig:hover { color: var(--text); border-color: rgba(255,255,255,.3); }
+.nav-ig svg { width: 20px; height: 20px; }
+.foot-social { display: flex; gap: .6rem; margin-top: 1.2rem; }
+.foot-social a { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; border: 1px solid var(--line-2); color: var(--text); }
+.foot-social a:hover { border-color: rgba(242,113,58,.5); }
+.foot-social svg { width: 20px; height: 20px; }
+.hero-badge { text-decoration: none; }
+.badge-g { width: 26px; height: 26px; flex-shrink: 0; }
+
+@media (max-width: 760px) {
+  .ig-band { grid-template-columns: minmax(0,1fr); gap: 1.2rem; }
+  .ig-icon { width: 60px; height: 60px; border-radius: 18px; }
+  .ig-copy strong { font-size: 1.25rem; overflow-wrap: anywhere; }
+  .ig-band .btn { width: 100%; }
+  .nav-ig { display: none; }
+}
+
+/* ============================================================
    PROCESS
 ============================================================ */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: step; }

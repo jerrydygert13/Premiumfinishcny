@@ -22,6 +22,8 @@ images/           Logo, hero car, before/after and interior photos
 | Monthly plan prices            | `index.html` → `#plans`                                              |
 | Add-ons                        | `index.html` → `.addons` (price list) **and** `.addons-grid` (booking form) |
 | Booking menu prices            | `index.html` → `#svcMenu` (keep in sync with the cards)              |
+| Reviews                        | `index.html` → `#reviews`: copy a `<figure class="review">` block; update the 5.0 / review count |
+| Instagram link                 | Search `index.html` for `instagram.com/premiumfinishcny`            |
 | Before/after photos            | Replace files in `images/` (`BEFORE-1.jpg` / `AFTER-1.jpg` …)         |
 | Logo                           | Replace `images/logo.png` (transparent background works best)        |
 | Brand colors                   | `css/styles.css` → `:root`                                           |
