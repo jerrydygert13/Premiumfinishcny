@@ -335,9 +335,9 @@
     .addons {
       margin-top: 20px; border-radius: var(--radius);
       background: var(--card); border: 1px solid var(--line);
-      padding: 1.8rem 2rem; display: grid; grid-template-columns: 200px repeat(3, 1fr); gap: 1rem; align-items: center;
+      padding: 1.8rem 2rem; display: grid; grid-template-columns: 180px repeat(5, 1fr); gap: 1rem; align-items: center;
     }
-    .addons-label { grid-row: span 2; font-family: var(--display); font-stretch: 125%; font-weight: 800; text-transform: uppercase; font-size: 1.1rem; line-height: 1.1; }
+    .addons-label { font-family: var(--display); font-stretch: 125%; font-weight: 800; text-transform: uppercase; font-size: 1.1rem; line-height: 1.1; }
     .addons-label small { display: block; font-family: var(--body); font-weight: 600; font-size: .78rem; color: var(--muted); text-transform: none; letter-spacing: 0; margin-top: .3rem; }
     .addon {
       border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem;
@@ -924,7 +924,6 @@
 
       <div class="addons r">
         <div class="addons-label">Add-ons<small>Stack onto any package</small></div>
-        <div class="addon"><span>Pet Hair Removal</span><strong>+$50</strong></div>
         <div class="addon"><span>Engine Bay Cleaning</span><strong>+$50</strong></div>
         <div class="addon"><span>Trim Restoration</span><strong>+$50</strong></div>
         <div class="addon"><span>Clay Bar &amp; Paint Decon</span><strong>+$50</strong></div>
@@ -1133,8 +1132,8 @@
           <div class="ans">Use the request form below — pick your service and any add-ons, then send us your details. We'll reach out to confirm a time. You can also call or text us any time at 315-641-9988.</div>
         </details>
         <details>
-          <summary>Can I add extras like pet hair removal?<span class="pm"></span></summary>
-          <div class="ans">Yes. Pet Hair Removal, Engine Bay Cleaning, Trim Restoration, Clay Bar &amp; Paint Decon, Headlight Restoration and Protective Wax Sealant can be added to any package when you book.</div>
+          <summary>Can I add extra services?<span class="pm"></span></summary>
+          <div class="ans">Yes. Engine Bay Cleaning, Trim Restoration, Clay Bar &amp; Paint Decon, Headlight Restoration and Protective Wax Sealant can be added to any package when you book.</div>
         </details>
       </div>
     </div>
@@ -1248,11 +1247,6 @@
             <!-- STEP 2: Add-ons -->
             <span class="addon-section-label">Step 2 — Add-ons (optional)</span>
             <div class="addons-grid">
-              <button type="button" class="addon-toggle" onclick="toggleAddon(this, 'Pet Hair Removal (+$50)')">
-                <span class="at-check">✓</span>
-                <span class="at-name">Pet Hair Removal</span>
-                <span class="at-price">+$50</span>
-              </button>
               <button type="button" class="addon-toggle" onclick="toggleAddon(this, 'Engine Bay Cleaning (+$50)')">
                 <span class="at-check">✓</span>
                 <span class="at-name">Engine Bay Cleaning</span>
