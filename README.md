@@ -34,3 +34,9 @@ images/           Logo, hero car, before/after and interior photos
 Submissions are saved to Supabase (`website_leads` table, read by the CRM) and
 also emailed through Formspree as a backup. Connection details are in the
 `<head>` of `index.html` (with an optional `supabase-config.js` override).
+
+## After changing CSS or JS
+
+Bump the `?v=` number on the `styles.css`, `main.js` and `booking.js` links in
+`index.html` (any new number works). Browsers keep old copies of these files, and
+the new number makes them download the updated ones.
