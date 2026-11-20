@@ -22,6 +22,7 @@ js/main.js        Used by every page: nav, mobile menu, scroll effects,
 js/booking.js     book.html only: service picker, add-ons, sending requests
 images/           Logo, hero car, before/after and interior photos
 images/instagram/ The 6 square photos in the Instagram strip
+images/work/      Instagram photos used on gallery.html (Recent work, Acura) and the home plans section
 ```
 
 The nav bar and footer are copied into all 4 pages. If you change one, change it
@@ -38,6 +39,7 @@ in every page.
 | Reviews                        | `gallery.html` → `#reviews` (all) and `index.html` → `#home-reviews` (3 picks). Copy a `<figure class="review">` block; update the 5.0 / review count |
 | Instagram photo strip          | Replace `images/instagram/ig-1.jpg` … `ig-6.jpg` (square photos)     |
 | Instagram / Facebook links     | Search all pages for `instagram.com` or `facebook.com`               |
+| Gallery "Recent work" photos   | `gallery.html` → `#work`; files in `images/work/` (4:5 photos)       |
 | Before/after photos            | Replace files in `images/` (`BEFORE-1.jpg` / `AFTER-1.jpg` …)         |
 | Logo                           | Replace `images/logo.png` (transparent background works best)        |
 | Brand colors                   | `css/styles.css` → `:root`                                           |
