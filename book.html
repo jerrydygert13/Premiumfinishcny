@@ -28,6 +28,10 @@
     };
   </script>
   <link rel="stylesheet" href="css/styles.css?v=202611202057" />
+  <style>
+    /* date + time pickers match the dark form */
+    .form-input[type=date], select.form-input { color-scheme: dark; cursor: pointer; }
+  </style>
 </head>
 <body>
 
@@ -279,9 +283,27 @@
                 <input class="form-input" type="text" id="reqAddress" name="Address" required placeholder="Where should we come to you?" autocomplete="street-address">
               </div>
 
+              <div class="form-row-split">
+                <div class="form-row">
+                  <label class="form-label" for="reqDate">Preferred Date</label>
+                  <input class="form-input" type="date" id="reqDate" name="Preferred Date" required>
+                </div>
+                <div class="form-row">
+                  <label class="form-label" for="reqTime">Preferred Time</label>
+                  <select class="form-input" id="reqTime" name="Preferred Time">
+                    <option>Morning (8–11am)</option>
+                    <option>Midday (11am–2pm)</option>
+                    <option>Afternoon (2–5pm)</option>
+                    <option>Evening (5–7pm)</option>
+                    <option selected>Flexible</option>
+                  </select>
+                </div>
+              </div>
+              <p class="form-optional" style="font-size:.82rem; margin:-.4rem 0 1.1rem;">We'll confirm the date with you by text or call before your appointment.</p>
+
               <div class="form-row">
                 <label class="form-label" for="reqNotes">Notes / Vehicle Details <span class="form-optional">(optional)</span></label>
-                <textarea class="form-input form-textarea" id="reqNotes" name="Notes" placeholder="Preferred day/time, vehicle make & model, anything else we should know"></textarea>
+                <textarea class="form-input form-textarea" id="reqNotes" name="Notes" placeholder="Vehicle make & model, gate code, anything else we should know"></textarea>
               </div>
 
               <button type="submit" class="continue-btn visible" id="requestSubmitBtn">
@@ -361,7 +383,7 @@
 
 
   <script src="js/main.js?v=202611202057"></script>
-  <script src="js/booking.js?v=202611202057"></script>
+  <script src="js/booking.js?v=202611251500"></script>
 
 </body>
 </html>

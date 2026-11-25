@@ -76,6 +76,13 @@ function revealForm() {
       (Supabase) so it appears in admin.html automatically.
    2) Also emails it to you via Formspree as a backup.
 ---------------------------------------------------------- */
+// earliest bookable day = tomorrow (local time)
+(function () {
+  const d = new Date(); d.setDate(d.getDate() + 1);
+  const el = document.getElementById('reqDate');
+  if (el) el.min = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+})();
+
 async function submitRequest(event) {
   event.preventDefault();
 
@@ -105,6 +112,8 @@ async function submitRequest(event) {
           service: selectedService || '',
           addons:  selectedAddons.slice(),
           notes:   document.getElementById('reqNotes').value.trim(),
+          preferredDate: document.getElementById('reqDate').value,   // YYYY-MM-DD
+          preferredTime: document.getElementById('reqTime').value,
           submittedAt: new Date().toISOString()
         };
         // The website_leads table has ONE jsonb column called "payload" (that's what the CRM reads),
